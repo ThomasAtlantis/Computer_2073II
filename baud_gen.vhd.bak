@@ -1,0 +1,34 @@
+--50e6 / (16 * 9600) = 325
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity baud_gen is
+	generic(framelen: integer := 325);
+	port(
+		clk, resetb: in std_logic;
+		bclk: out std_logic
+	);
+end baud_gen;
+
+architecture arch of baud_gen is
+begin
+	process(clk, resetb)
+	variable cnt: integer;
+	begin
+		if resetb = '1' then
+			cnt := 0;
+			bclk <= '0';
+		elsif clk'event and clk = '1' then
+			if cnt >= framelen then 
+				cnt := 0;
+				bclk <= '1';
+			else
+				cnt := cnt + 1;
+				bclk <= '0';
+			end if;
+		end if;
+	end process;
+end arch;
+		
+		

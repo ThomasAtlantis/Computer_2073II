@@ -1,0 +1,21 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity decoder is
+	port(
+		update: in std_logic;
+		bin: in std_logic_vector(7 downto 0);
+		dig: out std_logic_vector(7 downto 0);
+		sel: out std_logic_vector(5 downto 0)
+	);
+end entity decoder;
+
+architecture arch of decoder is
+begin
+	process(update) begin
+		if update'event and update = '1' then
+			dig <= bin;
+		end if;
+	end process;
+	sel <= "000000";
+end architecture arch;

@@ -1,0 +1,22 @@
+library ieee;
+use ieee.std_logic_1164.all;
+package signals is
+	constant HLT: std_logic_vector(4 downto 0) := "00000";
+	constant MOV: std_logic_vector(4 downto 0) := "00001";
+	constant INC: std_logic_vector(4 downto 0) := "00010";
+	constant DEC: std_logic_vector(4 downto 0) := "00011";
+	constant ADD: std_logic_vector(4 downto 0) := "00100";
+	constant SUB: std_logic_vector(4 downto 0) := "00101";
+	constant JMP: std_logic_vector(4 downto 0) := "00110";
+	constant SHL: std_logic_vector(4 downto 0) := "00111";
+	constant SHR: std_logic_vector(4 downto 0) := "01000";
+	constant MAND:std_logic_vector(4 downto 0) := "01001";
+	constant MOR: std_logic_vector(4 downto 0) := "01010";
+	constant MNOT:std_logic_vector(4 downto 0) := "01011";
+	constant MXOR:std_logic_vector(4 downto 0) := "01100";
+	constant MUL: std_logic_vector(4 downto 0) := "01101";
+	constant DIV: std_logic_vector(4 downto 0) := "01110";
+	constant NEG: std_logic_vector(4 downto 0) := "01111";
+	constant RDM: std_logic_vector(4 downto 0) := "10000";
+	constant WTM: std_logic_vector(4 downto 0) := "10001";
+end signals;

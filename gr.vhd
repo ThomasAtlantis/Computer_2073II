@@ -1,0 +1,42 @@
+library ieee;
+use ieee.std_logic_1164.all;
+entity gr is
+	port(
+		gr_grrd, gr_grwt: in std_logic_vector(3 downto 0);
+		gr_data_in: in std_logic_vector(7 downto 0);
+		gr_data_out: out std_logic_vector(7 downto 0)
+	);
+end entity gr;
+architecture behave of gr is
+signal gra_latch, grb_latch, grc_latch, grd_latch: std_logic_vector(7 downto 0):= (others => '0');
+begin
+	gr_data_out <= gra_latch when gr_grrd(0) = '1' else
+			  grb_latch when gr_grrd(1) = '1' else
+			  grc_latch when gr_grrd(2) = '1' else
+			  grd_latch when gr_grrd(3) = '1' else
+			  (others => 'Z');
+	process(gr_grwt(0))
+	begin
+		if (gr_grwt(0)'event and gr_grwt(0) = '1') then
+			gra_latch <= gr_data_in;
+		end if;
+	end process;
+	process(gr_grwt(1))
+	begin
+		if (gr_grwt(1)'event and gr_grwt(1) = '1') then
+			grb_latch <= gr_data_in;
+		end if;
+	end process;
+	process(gr_grwt(2))
+	begin
+		if (gr_grwt(2)'event and gr_grwt(2) = '1') then
+			grc_latch <= gr_data_in;
+		end if;
+	end process;
+	process(gr_grwt(3))
+	begin
+		if (gr_grwt(3)'event and gr_grwt(3) = '1') then
+			grd_latch <= gr_data_in;
+		end if;
+	end process;
+end behave;
