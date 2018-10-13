@@ -18,7 +18,7 @@ package computer_components is
 	);
 	end component;
 	
-	component ram
+	component ram_new
 	port(
 		ramin, ramrd, ramwt: in std_logic;
 		ram_address: in std_logic_vector(7 downto 0);
@@ -49,8 +49,8 @@ package computer_components is
 	component irdecoder
 	port(
 		ird_opcode: in std_logic_vector(4 downto 0);
-		ird_opsignals: out std_logic_vector(8 downto 0)
-		-- opsignals[8:0]: dly, prt, hlt, mov, so, do, jmp, rdm, wtm
+		ird_opsignals: out std_logic_vector(11 downto 0)
+		-- opsignals[9:0]: jnz, dly, prt, hlt, mov, so, do, jmp, rdm, wtm
 	);
 	end component;
 	
@@ -67,7 +67,8 @@ package computer_components is
 		alu_enalu: in std_logic;
 		alu_dst, alu_src: in std_logic_vector(7 downto 0); --src comes from dbufferb, dst comes from bus
 		alu_opcode: in std_logic_vector(4 downto 0);
-		alu_result: out std_logic_vector(7 downto 0)
+		alu_result: out std_logic_vector(7 downto 0);
+		alu_zf: out std_logic
 	);
 	end component;
 	
@@ -118,7 +119,8 @@ package computer_components is
 	port(
 		clk: in std_logic;
 		regf: in std_logic; --from ir
-		opsignals: in std_logic_vector(8 downto 0);
+		zf: in std_logic;
+		opsignals: in std_logic_vector(11 downto 0);
 		--from irdecoder opsignals[9:0]: jnz, dly, prt, hlt, mov, so, do, jmp, rdm, wtm
 		nextn, rstpc, ldpc, enpcout: out std_logic;  --control pc
 		enirin: out std_logic;								--control ir
@@ -143,6 +145,7 @@ entity computer_8bits is
 		--co_alu_src, co_alu_result: inout std_logic_vector(7 downto 0);
 		--data: out std_logic_vector(7 downto 0);
 		--grcode: out std_logic_vector(5 downto 0);
+		--zf: out std_logic;
 		--nodes for operation
 		clk_input: in std_logic;
 		sel: out std_logic_vector(5 downto 0);
@@ -155,16 +158,16 @@ signal co_opcode: std_logic_vector(4 downto 0);
 signal co_grcode: std_logic_vector(5 downto 0);
 signal data_latch, data_in, data_out, co_address_data, co_alu_src, co_alu_result: std_logic_vector(7 downto 0);
 signal grcode_latch: std_logic_vector(5 downto 0);
-signal co_opsignals: std_logic_vector(8 downto 0);
+signal co_opsignals: std_logic_vector(11 downto 0);
 signal co_clk, co_ramin, co_ramrd, co_ramwt, co_romin, 
 co_enrom, co_enirin, co_regf, co_enpcout, co_nextn, 
 co_ldpc, co_pc_rst, co_enalu, co_dbfaout, co_dbfbin,
 co_dbfbout, co_regrd1, co_regrd2, co_regwt, co_enled, 
-co_led_clk: std_logic;
+co_led_clk, co_zf, zf_latch: std_logic;
 begin
 	U1: clk_divider port map(clk_in=>clk_input, clk_out=>co_clk, clk_led=>co_led_clk);
 	U2: data_bus port map(bus_data_in=>data_out, bus_data_out=>data_in);
-	U3: ram port map(ramin=>co_ramin, ramrd=>co_ramrd, ramwt=>co_ramwt,
+	U3: ram_new port map(ramin=>co_ramin, ramrd=>co_ramrd, ramwt=>co_ramwt,
 		ram_address=>data_in, ram_data_in=>data_in, ram_data_out=>data_out);
 	U4: rom_new port map(romin=>co_romin, enrom=>co_enrom, rom_clk=> clk_input, rom_address=>data_in,
 		rom_data=>data_out);
@@ -174,7 +177,7 @@ begin
 	U7: pc port map(pc_enpcout=>co_enpcout, pc_nextn=>co_nextn, pc_ldpc=>co_ldpc,
 		pc_rst=>co_pc_rst, pc_ir_addr=>co_address_data, pc_pc_addr=>data_out);
 	U8: alu port map(alu_enalu=>co_enalu, alu_dst=>data_in, alu_src=>co_alu_src,
-		alu_opcode=>co_opcode, alu_result=>co_alu_result);
+		alu_opcode=>co_opcode, alu_result=>co_alu_result, alu_zf=>co_zf);
 	U9: dbuffera port map(dbfa_dbfaout=>co_dbfaout, dbfa_data_in=>co_address_data,
 		dbfa_data_out=>data_out);
 	U10: dbufferb port map(dbfb_dbfbin=>co_dbfbin, dbfb_dbfbout=>co_dbfbout, 
@@ -190,7 +193,7 @@ begin
 		nextn=>co_nextn, rstpc=>co_pc_rst, ldpc=>co_ldpc, enpcout=>co_enpcout, enirin=>co_enirin,
 		enalu=>co_enalu, dbfaout=>co_dbfaout, dbfbin=>co_dbfbin, dbfbout=>co_dbfbout,
 		regrd1=>co_regrd1, regrd2=>co_regrd2, regwt=>co_regwt, enrom=>co_enrom, romin=>co_romin,
-		ramin=>co_ramin, ramrd=>co_ramrd, ramwt=>co_ramwt, enled=>co_enled);
+		ramin=>co_ramin, ramrd=>co_ramrd, ramwt=>co_ramwt, enled=>co_enled, zf=>co_zf);
 --	process(data_out)
 --	begin
 --		data_latch <= data_out;
@@ -201,4 +204,9 @@ begin
 --	end process;
 --	data <= data_latch;
 --	grcode <= grcode_latch;
+--	process(co_zf)
+--	begin
+--		zf_latch <= co_zf;
+--	end process;
+--	zf <= zf_latch;
 end behave;

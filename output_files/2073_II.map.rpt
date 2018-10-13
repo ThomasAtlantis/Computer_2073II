@@ -1,5 +1,5 @@
 Analysis & Synthesis report for 2073_II
-Sat Oct 13 15:52:16 2018
+Sat Oct 13 19:05:24 2018
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
 
 
@@ -19,21 +19,22 @@ Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
  11. State Machine - |computer_8bits|statectrl:U14|next_state
  12. User-Specified and Inferred Latches
  13. Registers Removed During Synthesis
- 14. Removed Registers Triggering Further Register Optimizations
- 15. General Register Statistics
- 16. Inverted Register Statistics
- 17. Registers Packed Into Inferred Megafunctions
- 18. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. General Register Statistics
+ 15. Inverted Register Statistics
+ 16. Registers Packed Into Inferred Megafunctions
+ 17. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 18. Source assignments for ram_new:U3|ram_new_ram:inst|altsyncram:altsyncram_component|altsyncram_2kn3:auto_generated
  19. Source assignments for rom_new:U4|rom_new_rom:inst|altsyncram:altsyncram_component|altsyncram_kdr3:auto_generated
  20. Source assignments for led_encoder:U13|altsyncram:Ram0_rtl_0|altsyncram_r771:auto_generated
  21. Parameter Settings for User Entity Instance: clk_divider:U1
- 22. Parameter Settings for User Entity Instance: rom_new:U4|rom_new_rom:inst|altsyncram:altsyncram_component
- 23. Parameter Settings for Inferred Entity Instance: led_encoder:U13|altsyncram:Ram0_rtl_0
- 24. Parameter Settings for Inferred Entity Instance: alu:U8|lpm_add_sub:Add2
- 25. altsyncram Parameter Settings by Entity Instance
- 26. Post-Synthesis Netlist Statistics for Top Partition
- 27. Elapsed Time Per Partition
- 28. Analysis & Synthesis Messages
+ 22. Parameter Settings for User Entity Instance: ram_new:U3|ram_new_ram:inst|altsyncram:altsyncram_component
+ 23. Parameter Settings for User Entity Instance: rom_new:U4|rom_new_rom:inst|altsyncram:altsyncram_component
+ 24. Parameter Settings for Inferred Entity Instance: led_encoder:U13|altsyncram:Ram0_rtl_0
+ 25. Parameter Settings for Inferred Entity Instance: alu:U8|lpm_add_sub:Add2
+ 26. altsyncram Parameter Settings by Entity Instance
+ 27. Post-Synthesis Netlist Statistics for Top Partition
+ 28. Elapsed Time Per Partition
+ 29. Analysis & Synthesis Messages
 
 
 
@@ -60,18 +61,18 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Oct 13 15:52:16 2018       ;
+; Analysis & Synthesis Status        ; Successful - Sat Oct 13 19:05:24 2018       ;
 ; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 SJ Full Version ;
 ; Revision Name                      ; 2073_II                                     ;
 ; Top-level Entity Name              ; computer_8bits                              ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 802                                         ;
-;     Total combinational functions  ; 723                                         ;
-;     Dedicated logic registers      ; 182                                         ;
-; Total registers                    ; 182                                         ;
+; Total logic elements               ; 579                                         ;
+;     Total combinational functions  ; 495                                         ;
+;     Dedicated logic registers      ; 188                                         ;
+; Total registers                    ; 188                                         ;
 ; Total pins                         ; 15                                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 8,192                                       ;
+; Total memory bits                  ; 10,240                                      ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
 ; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
@@ -189,7 +190,6 @@ agreement for further details.
 +----------------------------------------------+-----------------+-------------------------------------------------------+--------------------------------------------------------------------------------+---------+
 ; rom_init.mif                                 ; yes             ; User Memory Initialization File                       ; F:/Quartus_II/QuartusWork/2073_II/rom_init.mif                                 ;         ;
 ; statectrl.vhd                                ; yes             ; User VHDL File                                        ; F:/Quartus_II/QuartusWork/2073_II/statectrl.vhd                                ;         ;
-; ram.vhd                                      ; yes             ; User VHDL File                                        ; F:/Quartus_II/QuartusWork/2073_II/ram.vhd                                      ;         ;
 ; pc.vhd                                       ; yes             ; User VHDL File                                        ; F:/Quartus_II/QuartusWork/2073_II/pc.vhd                                       ;         ;
 ; math.vhd                                     ; yes             ; User VHDL File                                        ; F:/Quartus_II/QuartusWork/2073_II/math.vhd                                     ;         ;
 ; led_encoder.vhd                              ; yes             ; User VHDL File                                        ; F:/Quartus_II/QuartusWork/2073_II/led_encoder.vhd                              ;         ;
@@ -207,6 +207,9 @@ agreement for further details.
 ; tristate_8bits.vhd                           ; yes             ; User VHDL File                                        ; F:/Quartus_II/QuartusWork/2073_II/tristate_8bits.vhd                           ;         ;
 ; rom_new.bdf                                  ; yes             ; User Block Diagram/Schematic File                     ; F:/Quartus_II/QuartusWork/2073_II/rom_new.bdf                                  ;         ;
 ; monostable_trigger.vhd                       ; yes             ; User VHDL File                                        ; F:/Quartus_II/QuartusWork/2073_II/monostable_trigger.vhd                       ;         ;
+; ram_new_ram.vhd                              ; yes             ; User Wizard-Generated File                            ; F:/Quartus_II/QuartusWork/2073_II/ram_new_ram.vhd                              ;         ;
+; ram_new.bdf                                  ; yes             ; User Block Diagram/Schematic File                     ; F:/Quartus_II/QuartusWork/2073_II/ram_new.bdf                                  ;         ;
+; ram_ctrl.vhd                                 ; yes             ; User VHDL File                                        ; F:/Quartus_II/QuartusWork/2073_II/ram_ctrl.vhd                                 ;         ;
 ; altsyncram.tdf                               ; yes             ; Megafunction                                          ; f:/quartus_ii/quartus/libraries/megafunctions/altsyncram.tdf                   ;         ;
 ; stratix_ram_block.inc                        ; yes             ; Megafunction                                          ; f:/quartus_ii/quartus/libraries/megafunctions/stratix_ram_block.inc            ;         ;
 ; lpm_mux.inc                                  ; yes             ; Megafunction                                          ; f:/quartus_ii/quartus/libraries/megafunctions/lpm_mux.inc                      ;         ;
@@ -216,6 +219,7 @@ agreement for further details.
 ; altrom.inc                                   ; yes             ; Megafunction                                          ; f:/quartus_ii/quartus/libraries/megafunctions/altrom.inc                       ;         ;
 ; altram.inc                                   ; yes             ; Megafunction                                          ; f:/quartus_ii/quartus/libraries/megafunctions/altram.inc                       ;         ;
 ; altdpram.inc                                 ; yes             ; Megafunction                                          ; f:/quartus_ii/quartus/libraries/megafunctions/altdpram.inc                     ;         ;
+; db/altsyncram_2kn3.tdf                       ; yes             ; Auto-Generated Megafunction                           ; F:/Quartus_II/QuartusWork/2073_II/db/altsyncram_2kn3.tdf                       ;         ;
 ; db/altsyncram_kdr3.tdf                       ; yes             ; Auto-Generated Megafunction                           ; F:/Quartus_II/QuartusWork/2073_II/db/altsyncram_kdr3.tdf                       ;         ;
 ; db/altsyncram_r771.tdf                       ; yes             ; Auto-Generated Megafunction                           ; F:/Quartus_II/QuartusWork/2073_II/db/altsyncram_r771.tdf                       ;         ;
 ; db/2073_ii.rom0_led_encoder_ae1e0bd6.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; F:/Quartus_II/QuartusWork/2073_II/db/2073_ii.rom0_led_encoder_ae1e0bd6.hdl.mif ;         ;
@@ -234,31 +238,31 @@ agreement for further details.
 +---------------------------------------------+-----------------------+
 ; Resource                                    ; Usage                 ;
 +---------------------------------------------+-----------------------+
-; Estimated Total logic elements              ; 802                   ;
+; Estimated Total logic elements              ; 579                   ;
 ;                                             ;                       ;
-; Total combinational functions               ; 723                   ;
+; Total combinational functions               ; 495                   ;
 ; Logic element usage by number of LUT inputs ;                       ;
-;     -- 4 input functions                    ; 328                   ;
-;     -- 3 input functions                    ; 276                   ;
-;     -- <=2 input functions                  ; 119                   ;
+;     -- 4 input functions                    ; 256                   ;
+;     -- 3 input functions                    ; 132                   ;
+;     -- <=2 input functions                  ; 107                   ;
 ;                                             ;                       ;
 ; Logic elements by mode                      ;                       ;
-;     -- normal mode                          ; 635                   ;
+;     -- normal mode                          ; 407                   ;
 ;     -- arithmetic mode                      ; 88                    ;
 ;                                             ;                       ;
-; Total registers                             ; 182                   ;
-;     -- Dedicated logic registers            ; 182                   ;
+; Total registers                             ; 188                   ;
+;     -- Dedicated logic registers            ; 188                   ;
 ;     -- I/O registers                        ; 0                     ;
 ;                                             ;                       ;
 ; I/O pins                                    ; 15                    ;
-; Total memory bits                           ; 8192                  ;
+; Total memory bits                           ; 10240                 ;
 ;                                             ;                       ;
 ; Embedded Multiplier 9-bit elements          ; 0                     ;
 ;                                             ;                       ;
 ; Maximum fan-out node                        ; ir:U5|instruction[11] ;
-; Maximum fan-out                             ; 89                    ;
-; Total fan-out                               ; 3121                  ;
-; Average fan-out                             ; 3.23                  ;
+; Maximum fan-out                             ; 85                    ;
+; Total fan-out                               ; 2477                  ;
+; Average fan-out                             ; 3.29                  ;
 +---------------------------------------------+-----------------------+
 
 
@@ -267,8 +271,8 @@ agreement for further details.
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                        ; Library Name ;
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------+--------------+
-; |computer_8bits                              ; 723 (76)          ; 182 (0)      ; 8192        ; 0            ; 0       ; 0         ; 15   ; 0            ; |computer_8bits                                                                                            ; work         ;
-;    |alu:U8|                                  ; 231 (214)         ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|alu:U8                                                                                     ; work         ;
+; |computer_8bits                              ; 495 (56)          ; 188 (0)      ; 10240       ; 0            ; 0       ; 0         ; 15   ; 0            ; |computer_8bits                                                                                            ; work         ;
+;    |alu:U8|                                  ; 239 (222)         ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|alu:U8                                                                                     ; work         ;
 ;       |lpm_add_sub:Add2|                     ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|alu:U8|lpm_add_sub:Add2                                                                    ; work         ;
 ;          |add_sub_cui:auto_generated|        ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|alu:U8|lpm_add_sub:Add2|add_sub_cui:auto_generated                                         ; work         ;
 ;    |clk_divider:U1|                          ; 18 (18)           ; 20 (20)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|clk_divider:U1                                                                             ; work         ;
@@ -276,30 +280,35 @@ agreement for further details.
 ;    |gr:U12|                                  ; 1 (1)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|gr:U12                                                                                     ; work         ;
 ;    |grctrl:U11|                              ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|grctrl:U11                                                                                 ; work         ;
 ;    |ir:U5|                                   ; 5 (5)             ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|ir:U5                                                                                      ; work         ;
-;    |irdecoder:U6|                            ; 12 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|irdecoder:U6                                                                               ; work         ;
+;    |irdecoder:U6|                            ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|irdecoder:U6                                                                               ; work         ;
 ;    |led_encoder:U13|                         ; 20 (20)           ; 13 (13)      ; 6144        ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|led_encoder:U13                                                                            ; work         ;
 ;       |altsyncram:Ram0_rtl_0|                ; 0 (0)             ; 0 (0)        ; 6144        ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|led_encoder:U13|altsyncram:Ram0_rtl_0                                                      ; work         ;
 ;          |altsyncram_r771:auto_generated|    ; 0 (0)             ; 0 (0)        ; 6144        ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|led_encoder:U13|altsyncram:Ram0_rtl_0|altsyncram_r771:auto_generated                       ; work         ;
 ;    |pc:U7|                                   ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|pc:U7                                                                                      ; work         ;
-;    |ram:U3|                                  ; 224 (224)         ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|ram:U3                                                                                     ; work         ;
+;    |ram_new:U3|                              ; 0 (0)             ; 8 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|ram_new:U3                                                                                 ; work         ;
+;       |ram_ctrl:inst1|                       ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|ram_new:U3|ram_ctrl:inst1                                                                  ; work         ;
+;       |ram_new_ram:inst|                     ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|ram_new:U3|ram_new_ram:inst                                                                ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|ram_new:U3|ram_new_ram:inst|altsyncram:altsyncram_component                                ; work         ;
+;             |altsyncram_2kn3:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|ram_new:U3|ram_new_ram:inst|altsyncram:altsyncram_component|altsyncram_2kn3:auto_generated ; work         ;
 ;    |rom_new:U4|                              ; 4 (1)             ; 4 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|rom_new:U4                                                                                 ; work         ;
 ;       |monostable_trigger:inst3|             ; 3 (3)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|rom_new:U4|monostable_trigger:inst3                                                        ; work         ;
 ;       |rom_new_rom:inst|                     ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|rom_new:U4|rom_new_rom:inst                                                                ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|rom_new:U4|rom_new_rom:inst|altsyncram:altsyncram_component                                ; work         ;
 ;             |altsyncram_kdr3:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|rom_new:U4|rom_new_rom:inst|altsyncram:altsyncram_component|altsyncram_kdr3:auto_generated ; work         ;
-;    |statectrl:U14|                           ; 103 (103)         ; 76 (76)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|statectrl:U14                                                                              ; work         ;
+;    |statectrl:U14|                           ; 110 (110)         ; 78 (78)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|statectrl:U14                                                                              ; work         ;
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                                      ;
-+-------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+----------------------------------------------+
-; Name                                                                                                  ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                                          ;
-+-------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+----------------------------------------------+
-; led_encoder:U13|altsyncram:Ram0_rtl_0|altsyncram_r771:auto_generated|ALTSYNCRAM                       ; AUTO ; ROM  ; 256          ; 24           ; --           ; --           ; 6144 ; db/2073_II.rom0_led_encoder_ae1e0bd6.hdl.mif ;
-; rom_new:U4|rom_new_rom:inst|altsyncram:altsyncram_component|altsyncram_kdr3:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 256          ; 8            ; --           ; --           ; 2048 ; rom_init.mif                                 ;
-+-------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+----------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                             ;
++-------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+----------------------------------------------+
+; Name                                                                                                  ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                                          ;
++-------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+----------------------------------------------+
+; led_encoder:U13|altsyncram:Ram0_rtl_0|altsyncram_r771:auto_generated|ALTSYNCRAM                       ; AUTO ; ROM         ; 256          ; 24           ; --           ; --           ; 6144 ; db/2073_II.rom0_led_encoder_ae1e0bd6.hdl.mif ;
+; ram_new:U3|ram_new_ram:inst|altsyncram:altsyncram_component|altsyncram_2kn3:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 256          ; 8            ; --           ; --           ; 2048 ; None                                         ;
+; rom_new:U4|rom_new_rom:inst|altsyncram:altsyncram_component|altsyncram_kdr3:auto_generated|ALTSYNCRAM ; AUTO ; ROM         ; 256          ; 8            ; --           ; --           ; 2048 ; rom_init.mif                                 ;
++-------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+----------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -307,6 +316,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+---------------------------------------------+-----------------+
 ; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                             ; IP Include File ;
 +--------+--------------+---------+--------------+--------------+---------------------------------------------+-----------------+
+; Altera ; RAM: 1-PORT  ; 15.0    ; N/A          ; N/A          ; |computer_8bits|ram_new:U3|ram_new_ram:inst ; ram_new_ram.vhd ;
 ; Altera ; ROM: 1-PORT  ; 15.0    ; N/A          ; N/A          ; |computer_8bits|rom_new:U4|rom_new_rom:inst ; rom_new_rom.vhd ;
 +--------+--------------+---------+--------------+--------------+---------------------------------------------+-----------------+
 
@@ -369,114 +379,23 @@ Encoding Type:  One-Hot
 +--------------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+--------------------+--------------------+
 
 
-+------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                        ;
-+------------------------------------------------------+----------------------------+------------------------+
-; Latch Name                                           ; Latch Enable Signal        ; Free of Timing Hazards ;
-+------------------------------------------------------+----------------------------+------------------------+
-; ram:U3|ram_data~80                                   ; rtl~0                      ; yes                    ;
-; ram:U3|ram_data~72                                   ; rtl~1                      ; yes                    ;
-; ram:U3|ram_data~64                                   ; rtl~2                      ; yes                    ;
-; ram:U3|ram_data~88                                   ; rtl~3                      ; yes                    ;
-; ram:U3|ram_data~40                                   ; rtl~4                      ; yes                    ;
-; ram:U3|ram_data~48                                   ; rtl~5                      ; yes                    ;
-; ram:U3|ram_data~32                                   ; rtl~6                      ; yes                    ;
-; ram:U3|ram_data~56                                   ; rtl~7                      ; yes                    ;
-; ram:U3|ram_data~16                                   ; rtl~8                      ; yes                    ;
-; ram:U3|ram_data~8                                    ; rtl~9                      ; yes                    ;
-; ram:U3|ram_data~0                                    ; rtl~10                     ; yes                    ;
-; ram:U3|ram_data~24                                   ; rtl~11                     ; yes                    ;
-; ram:U3|ram_data~104                                  ; rtl~12                     ; yes                    ;
-; ram:U3|ram_data~112                                  ; rtl~13                     ; yes                    ;
-; ram:U3|ram_data~96                                   ; rtl~14                     ; yes                    ;
-; ram:U3|ram_data~120                                  ; rtl~15                     ; yes                    ;
-; dbufferb:U10|data_latch[0]                           ; dbufferb:U10|data_latch[7] ; yes                    ;
-; ram:U3|ram_data~49                                   ; rtl~5                      ; yes                    ;
-; ram:U3|ram_data~81                                   ; rtl~0                      ; yes                    ;
-; ram:U3|ram_data~17                                   ; rtl~8                      ; yes                    ;
-; ram:U3|ram_data~113                                  ; rtl~13                     ; yes                    ;
-; ram:U3|ram_data~73                                   ; rtl~1                      ; yes                    ;
-; ram:U3|ram_data~41                                   ; rtl~4                      ; yes                    ;
-; ram:U3|ram_data~9                                    ; rtl~9                      ; yes                    ;
-; ram:U3|ram_data~105                                  ; rtl~12                     ; yes                    ;
-; ram:U3|ram_data~33                                   ; rtl~6                      ; yes                    ;
-; ram:U3|ram_data~65                                   ; rtl~2                      ; yes                    ;
-; ram:U3|ram_data~1                                    ; rtl~10                     ; yes                    ;
-; ram:U3|ram_data~97                                   ; rtl~14                     ; yes                    ;
-; ram:U3|ram_data~89                                   ; rtl~3                      ; yes                    ;
-; ram:U3|ram_data~57                                   ; rtl~7                      ; yes                    ;
-; ram:U3|ram_data~25                                   ; rtl~11                     ; yes                    ;
-; ram:U3|ram_data~121                                  ; rtl~15                     ; yes                    ;
-; dbufferb:U10|data_latch[1]                           ; dbufferb:U10|data_latch[7] ; yes                    ;
-; ram:U3|ram_data~50                                   ; rtl~5                      ; yes                    ;
-; ram:U3|ram_data~42                                   ; rtl~4                      ; yes                    ;
-; ram:U3|ram_data~34                                   ; rtl~6                      ; yes                    ;
-; ram:U3|ram_data~58                                   ; rtl~7                      ; yes                    ;
-; ram:U3|ram_data~74                                   ; rtl~1                      ; yes                    ;
-; ram:U3|ram_data~82                                   ; rtl~0                      ; yes                    ;
-; ram:U3|ram_data~66                                   ; rtl~2                      ; yes                    ;
-; ram:U3|ram_data~90                                   ; rtl~3                      ; yes                    ;
-; ram:U3|ram_data~10                                   ; rtl~9                      ; yes                    ;
-; ram:U3|ram_data~18                                   ; rtl~8                      ; yes                    ;
-; ram:U3|ram_data~2                                    ; rtl~10                     ; yes                    ;
-; ram:U3|ram_data~26                                   ; rtl~11                     ; yes                    ;
-; ram:U3|ram_data~114                                  ; rtl~13                     ; yes                    ;
-; ram:U3|ram_data~106                                  ; rtl~12                     ; yes                    ;
-; ram:U3|ram_data~98                                   ; rtl~14                     ; yes                    ;
-; ram:U3|ram_data~122                                  ; rtl~15                     ; yes                    ;
-; dbufferb:U10|data_latch[2]                           ; dbufferb:U10|data_latch[7] ; yes                    ;
-; ram:U3|ram_data~43                                   ; rtl~4                      ; yes                    ;
-; ram:U3|ram_data~75                                   ; rtl~1                      ; yes                    ;
-; ram:U3|ram_data~11                                   ; rtl~9                      ; yes                    ;
-; ram:U3|ram_data~107                                  ; rtl~12                     ; yes                    ;
-; ram:U3|ram_data~83                                   ; rtl~0                      ; yes                    ;
-; ram:U3|ram_data~51                                   ; rtl~5                      ; yes                    ;
-; ram:U3|ram_data~19                                   ; rtl~8                      ; yes                    ;
-; ram:U3|ram_data~115                                  ; rtl~13                     ; yes                    ;
-; ram:U3|ram_data~67                                   ; rtl~2                      ; yes                    ;
-; ram:U3|ram_data~35                                   ; rtl~6                      ; yes                    ;
-; ram:U3|ram_data~3                                    ; rtl~10                     ; yes                    ;
-; ram:U3|ram_data~99                                   ; rtl~14                     ; yes                    ;
-; ram:U3|ram_data~59                                   ; rtl~7                      ; yes                    ;
-; ram:U3|ram_data~91                                   ; rtl~3                      ; yes                    ;
-; ram:U3|ram_data~27                                   ; rtl~11                     ; yes                    ;
-; ram:U3|ram_data~123                                  ; rtl~15                     ; yes                    ;
-; dbufferb:U10|data_latch[3]                           ; dbufferb:U10|data_latch[7] ; yes                    ;
-; ram:U3|ram_data~84                                   ; rtl~0                      ; yes                    ;
-; ram:U3|ram_data~76                                   ; rtl~1                      ; yes                    ;
-; ram:U3|ram_data~68                                   ; rtl~2                      ; yes                    ;
-; ram:U3|ram_data~92                                   ; rtl~3                      ; yes                    ;
-; ram:U3|ram_data~44                                   ; rtl~4                      ; yes                    ;
-; ram:U3|ram_data~52                                   ; rtl~5                      ; yes                    ;
-; ram:U3|ram_data~36                                   ; rtl~6                      ; yes                    ;
-; ram:U3|ram_data~60                                   ; rtl~7                      ; yes                    ;
-; ram:U3|ram_data~20                                   ; rtl~8                      ; yes                    ;
-; ram:U3|ram_data~12                                   ; rtl~9                      ; yes                    ;
-; ram:U3|ram_data~4                                    ; rtl~10                     ; yes                    ;
-; ram:U3|ram_data~28                                   ; rtl~11                     ; yes                    ;
-; ram:U3|ram_data~108                                  ; rtl~12                     ; yes                    ;
-; ram:U3|ram_data~116                                  ; rtl~13                     ; yes                    ;
-; ram:U3|ram_data~100                                  ; rtl~14                     ; yes                    ;
-; ram:U3|ram_data~124                                  ; rtl~15                     ; yes                    ;
-; dbufferb:U10|data_latch[4]                           ; dbufferb:U10|data_latch[7] ; yes                    ;
-; ram:U3|ram_data~53                                   ; rtl~5                      ; yes                    ;
-; ram:U3|ram_data~85                                   ; rtl~0                      ; yes                    ;
-; ram:U3|ram_data~21                                   ; rtl~8                      ; yes                    ;
-; ram:U3|ram_data~117                                  ; rtl~13                     ; yes                    ;
-; ram:U3|ram_data~77                                   ; rtl~1                      ; yes                    ;
-; ram:U3|ram_data~45                                   ; rtl~4                      ; yes                    ;
-; ram:U3|ram_data~13                                   ; rtl~9                      ; yes                    ;
-; ram:U3|ram_data~109                                  ; rtl~12                     ; yes                    ;
-; ram:U3|ram_data~37                                   ; rtl~6                      ; yes                    ;
-; ram:U3|ram_data~69                                   ; rtl~2                      ; yes                    ;
-; ram:U3|ram_data~5                                    ; rtl~10                     ; yes                    ;
-; ram:U3|ram_data~101                                  ; rtl~14                     ; yes                    ;
-; ram:U3|ram_data~93                                   ; rtl~3                      ; yes                    ;
-; ram:U3|ram_data~61                                   ; rtl~7                      ; yes                    ;
-; ram:U3|ram_data~29                                   ; rtl~11                     ; yes                    ;
-; Number of user-specified and inferred latches = 136  ;                            ;                        ;
-+------------------------------------------------------+----------------------------+------------------------+
-Table restricted to first 100 entries. Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
++----------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                      ;
++----------------------------------------------------+----------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal        ; Free of Timing Hazards ;
++----------------------------------------------------+----------------------------+------------------------+
+; dbufferb:U10|data_latch[0]                         ; dbufferb:U10|data_latch[7] ; yes                    ;
+; dbufferb:U10|data_latch[1]                         ; dbufferb:U10|data_latch[7] ; yes                    ;
+; dbufferb:U10|data_latch[2]                         ; dbufferb:U10|data_latch[7] ; yes                    ;
+; dbufferb:U10|data_latch[3]                         ; dbufferb:U10|data_latch[7] ; yes                    ;
+; dbufferb:U10|data_latch[4]                         ; dbufferb:U10|data_latch[7] ; yes                    ;
+; dbufferb:U10|data_latch[5]                         ; dbufferb:U10|data_latch[7] ; yes                    ;
+; dbufferb:U10|data_latch[6]                         ; dbufferb:U10|data_latch[7] ; yes                    ;
+; dbufferb:U10|data_latch[7]                         ; dbufferb:U10|data_latch[7] ; yes                    ;
+; alu:U8|zero_flag_latch                             ; alu:U8|process_1           ; yes                    ;
+; Number of user-specified and inferred latches = 9  ;                            ;                        ;
++----------------------------------------------------+----------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +--------------------------------------------------------------------------------+
@@ -485,20 +404,9 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; Register name                         ; Reason for Removal                     ;
 +---------------------------------------+----------------------------------------+
 ; led_encoder:U13|led_sel[3..5]         ; Stuck at VCC due to stuck port data_in ;
-; statectrl:U14|current_state.t17       ; Lost fanout                            ;
-; statectrl:U14|next_state.t17          ; Lost fanout                            ;
 ; statectrl:U14|counter[20]             ; Lost fanout                            ;
-; Total Number of Removed Registers = 6 ;                                        ;
+; Total Number of Removed Registers = 4 ;                                        ;
 +---------------------------------------+----------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                   ;
-+---------------------------------+--------------------+----------------------------------------+
-; Register name                   ; Reason for Removal ; Registers Removed due to This Register ;
-+---------------------------------+--------------------+----------------------------------------+
-; statectrl:U14|current_state.t17 ; Lost Fanouts       ; statectrl:U14|next_state.t17           ;
-+---------------------------------+--------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -506,7 +414,7 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 182   ;
+; Total registers                              ; 188   ;
 ; Number of registers using Synchronous Clear  ; 28    ;
 ; Number of registers using Synchronous Load   ; 8     ;
 ; Number of registers using Asynchronous Clear ; 4     ;
@@ -547,13 +455,22 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |computer_8bits|pc:U7|addr_latch[5]             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |computer_8bits|led_encoder:U13|led_dig_temp[7] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |computer_8bits|grctrl:U11|grc_grrd[3]          ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |computer_8bits|pc:U7|addr_latch[4]             ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |computer_8bits|led_encoder:U13|led_dig_temp[1] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |computer_8bits|grctrl:U11|grc_grrd[0]          ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |computer_8bits|grctrl:U11|grc_grwt[2]          ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |computer_8bits|grctrl:U11|grc_grwt[1]          ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |computer_8bits|grctrl:U11|grc_grwt[0]          ;
 ; 9:1                ; 8 bits    ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |computer_8bits|data_out[6]                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Source assignments for ram_new:U3|ram_new_ram:inst|altsyncram:altsyncram_component|altsyncram_2kn3:auto_generated ;
++---------------------------------+--------------------+------+-----------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                  ;
++---------------------------------+--------------------+------+-----------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                   ;
++---------------------------------+--------------------+------+-----------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------+
@@ -582,6 +499,67 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 ; LED            ; 17    ; Signed Integer                     ;
 ; STATECTRL      ; 5     ; Signed Integer                     ;
 +----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ram_new:U3|ram_new_ram:inst|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+----------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                         ;
++------------------------------------+----------------------+----------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                      ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                   ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                 ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                 ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                               ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                      ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                                      ;
+; WIDTH_A                            ; 8                    ; Signed Integer                               ;
+; WIDTHAD_A                          ; 8                    ; Signed Integer                               ;
+; NUMWORDS_A                         ; 256                  ; Signed Integer                               ;
+; OUTDATA_REG_A                      ; CLOCK1               ; Untyped                                      ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                      ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                      ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                      ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                      ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                      ;
+; WIDTH_B                            ; 1                    ; Signed Integer                               ;
+; WIDTHAD_B                          ; 1                    ; Signed Integer                               ;
+; NUMWORDS_B                         ; 0                    ; Signed Integer                               ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                      ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                      ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                      ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                      ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                      ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                      ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                      ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                      ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                      ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                      ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                      ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                      ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                               ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Signed Integer                               ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                      ;
+; BYTE_SIZE                          ; 8                    ; Signed Integer                               ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                      ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                      ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                      ;
+; INIT_FILE                          ; UNUSED               ; Untyped                                      ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                      ;
+; MAXIMUM_DEPTH                      ; 0                    ; Signed Integer                               ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                      ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                      ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                      ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                      ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                      ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                      ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                      ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                      ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Signed Integer                               ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                                      ;
+; CBXI_PARAMETER                     ; altsyncram_2kn3      ; Untyped                                      ;
++------------------------------------+----------------------+----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -740,7 +718,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+-------------------------------------------------------------+
 ; Name                                      ; Value                                                       ;
 +-------------------------------------------+-------------------------------------------------------------+
-; Number of entity instances                ; 2                                                           ;
+; Number of entity instances                ; 3                                                           ;
+; Entity Instance                           ; ram_new:U3|ram_new_ram:inst|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                                 ;
+;     -- WIDTH_A                            ; 8                                                           ;
+;     -- NUMWORDS_A                         ; 256                                                         ;
+;     -- OUTDATA_REG_A                      ; CLOCK1                                                      ;
+;     -- WIDTH_B                            ; 1                                                           ;
+;     -- NUMWORDS_B                         ; 0                                                           ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                      ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                        ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                   ;
 ; Entity Instance                           ; rom_new:U4|rom_new_rom:inst|altsyncram:altsyncram_component ;
 ;     -- OPERATION_MODE                     ; ROM                                                         ;
 ;     -- WIDTH_A                            ; 8                                                           ;
@@ -772,26 +761,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 15                          ;
-; cycloneiii_ff         ; 182                         ;
+; cycloneiii_ff         ; 188                         ;
 ;     CLR               ; 4                           ;
 ;     ENA               ; 16                          ;
 ;     ENA SCLR          ; 20                          ;
 ;     SCLR SLD          ; 8                           ;
-;     plain             ; 134                         ;
-; cycloneiii_lcell_comb ; 732                         ;
+;     plain             ; 140                         ;
+; cycloneiii_lcell_comb ; 504                         ;
 ;     arith             ; 88                          ;
 ;         2 data inputs ; 53                          ;
 ;         3 data inputs ; 35                          ;
-;     normal            ; 644                         ;
+;     normal            ; 416                         ;
 ;         0 data inputs ; 4                           ;
 ;         1 data inputs ; 19                          ;
-;         2 data inputs ; 52                          ;
-;         3 data inputs ; 241                         ;
-;         4 data inputs ; 328                         ;
-; cycloneiii_ram_block  ; 32                          ;
+;         2 data inputs ; 40                          ;
+;         3 data inputs ; 97                          ;
+;         4 data inputs ; 256                         ;
+; cycloneiii_ram_block  ; 40                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 16.00                       ;
-; Average LUT depth     ; 4.92                        ;
+; Max LUT depth         ; 21.10                       ;
+; Average LUT depth     ; 8.21                        ;
 +-----------------------+-----------------------------+
 
 
@@ -800,7 +789,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -810,16 +799,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Full Version
-    Info: Processing started: Sat Oct 13 15:51:51 2018
+    Info: Processing started: Sat Oct 13 19:05:01 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 2073_II -c 2073_II
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
 Info (12021): Found 3 design units, including 1 entities, in source file statectrl.vhd
     Info (12022): Found design unit 1: statedef
     Info (12022): Found design unit 2: statectrl-behave
     Info (12023): Found entity 1: statectrl
-Info (12021): Found 2 design units, including 1 entities, in source file ram.vhd
-    Info (12022): Found design unit 1: ram-behave
-    Info (12023): Found entity 1: ram
 Info (12021): Found 2 design units, including 1 entities, in source file pc.vhd
     Info (12022): Found design unit 1: pc-behave
     Info (12023): Found entity 1: pc
@@ -871,16 +857,78 @@ Info (12021): Found 1 design units, including 1 entities, in source file rom_new
 Info (12021): Found 2 design units, including 1 entities, in source file monostable_trigger.vhd
     Info (12022): Found design unit 1: monostable_trigger-arch
     Info (12023): Found entity 1: monostable_trigger
+Info (12021): Found 2 design units, including 1 entities, in source file ram_new_ram.vhd
+    Info (12022): Found design unit 1: ram_new_ram-SYN
+    Info (12023): Found entity 1: ram_new_ram
+Info (12021): Found 1 design units, including 1 entities, in source file ram_new.bdf
+    Info (12023): Found entity 1: ram_new
+Info (12021): Found 2 design units, including 1 entities, in source file ram_ctrl.vhd
+    Info (12022): Found design unit 1: ram_ctrl-arch
+    Info (12023): Found entity 1: ram_ctrl
 Info (12127): Elaborating entity "computer_8bits" for the top level hierarchy
 Info (12128): Elaborating entity "clk_divider" for hierarchy "clk_divider:U1"
 Info (12128): Elaborating entity "data_bus" for hierarchy "data_bus:U2"
-Info (12128): Elaborating entity "ram" for hierarchy "ram:U3"
-Warning (10492): VHDL Process Statement warning at ram.vhd(22): signal "ram_address_latch" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ram.vhd(29): signal "ram_address_latch" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ram.vhd(33): signal "ram_data_in" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at ram.vhd(33): signal "ram_address_latch" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "ram_new" for hierarchy "ram_new:U3"
+Info (12128): Elaborating entity "tristate_8bits" for hierarchy "ram_new:U3|tristate_8bits:inst2"
+Info (12128): Elaborating entity "ram_new_ram" for hierarchy "ram_new:U3|ram_new_ram:inst"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "ram_new:U3|ram_new_ram:inst|altsyncram:altsyncram_component"
+Info (12130): Elaborated megafunction instantiation "ram_new:U3|ram_new_ram:inst|altsyncram:altsyncram_component"
+Info (12133): Instantiated megafunction "ram_new:U3|ram_new_ram:inst|altsyncram:altsyncram_component" with the following parameter:
+    Info (12134): Parameter "address_aclr_a" = "UNUSED"
+    Info (12134): Parameter "address_aclr_b" = "NONE"
+    Info (12134): Parameter "address_reg_b" = "CLOCK1"
+    Info (12134): Parameter "byte_size" = "8"
+    Info (12134): Parameter "byteena_aclr_a" = "UNUSED"
+    Info (12134): Parameter "byteena_aclr_b" = "NONE"
+    Info (12134): Parameter "byteena_reg_b" = "CLOCK1"
+    Info (12134): Parameter "clock_enable_core_a" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_core_b" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_input_b" = "NORMAL"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_b" = "NORMAL"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "ecc_pipeline_stage_enabled" = "FALSE"
+    Info (12134): Parameter "enable_ecc" = "FALSE"
+    Info (12134): Parameter "implement_in_les" = "OFF"
+    Info (12134): Parameter "indata_aclr_a" = "UNUSED"
+    Info (12134): Parameter "indata_aclr_b" = "NONE"
+    Info (12134): Parameter "indata_reg_b" = "CLOCK1"
+    Info (12134): Parameter "init_file" = "UNUSED"
+    Info (12134): Parameter "init_file_layout" = "PORT_A"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "numwords_a" = "256"
+    Info (12134): Parameter "numwords_b" = "0"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK1"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "ram_block_type" = "AUTO"
+    Info (12134): Parameter "rdcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK1"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "read_during_write_mode_port_b" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "stratixiv_m144k_allow_dual_clocks" = "ON"
+    Info (12134): Parameter "width_a" = "8"
+    Info (12134): Parameter "width_b" = "1"
+    Info (12134): Parameter "width_byteena_a" = "1"
+    Info (12134): Parameter "width_byteena_b" = "1"
+    Info (12134): Parameter "width_eccstatus" = "3"
+    Info (12134): Parameter "widthad_a" = "8"
+    Info (12134): Parameter "widthad_b" = "1"
+    Info (12134): Parameter "wrcontrol_aclr_a" = "UNUSED"
+    Info (12134): Parameter "wrcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
+    Info (12134): Parameter "lpm_hint" = "UNUSED"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_2kn3.tdf
+    Info (12023): Found entity 1: altsyncram_2kn3
+Info (12128): Elaborating entity "altsyncram_2kn3" for hierarchy "ram_new:U3|ram_new_ram:inst|altsyncram:altsyncram_component|altsyncram_2kn3:auto_generated"
+Info (12128): Elaborating entity "ram_ctrl" for hierarchy "ram_new:U3|ram_ctrl:inst1"
 Info (12128): Elaborating entity "rom_new" for hierarchy "rom_new:U4"
-Info (12128): Elaborating entity "tristate_8bits" for hierarchy "rom_new:U4|tristate_8bits:inst1"
 Info (12128): Elaborating entity "rom_new_rom" for hierarchy "rom_new:U4|rom_new_rom:inst"
 Info (12128): Elaborating entity "altsyncram" for hierarchy "rom_new:U4|rom_new_rom:inst|altsyncram:altsyncram_component"
 Info (12130): Elaborated megafunction instantiation "rom_new:U4|rom_new_rom:inst|altsyncram:altsyncram_component"
@@ -944,6 +992,11 @@ Warning (10492): VHDL Process Statement warning at ir.vhd(30): signal "instructi
 Info (12128): Elaborating entity "irdecoder" for hierarchy "irdecoder:U6"
 Info (12128): Elaborating entity "pc" for hierarchy "pc:U7"
 Info (12128): Elaborating entity "alu" for hierarchy "alu:U8"
+Warning (10492): VHDL Process Statement warning at alu.vhd(70): signal "alu_enalu" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at alu.vhd(70): signal "alu_opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at alu.vhd(71): signal "alu_opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at alu.vhd(68): inferring latch(es) for signal or variable "zero_flag_latch", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "zero_flag_latch" at alu.vhd(68)
 Info (12128): Elaborating entity "dbuffera" for hierarchy "dbuffera:U9"
 Info (12128): Elaborating entity "dbufferb" for hierarchy "dbufferb:U10"
 Info (10041): Inferred latch for "data_latch[0]" at dbufferb.vhd(15)
@@ -1013,276 +1066,20 @@ Info (12133): Instantiated megafunction "alu:U8|lpm_add_sub:Add2" with the follo
     Info (12134): Parameter "ONE_INPUT_IS_CONSTANT" = "NO"
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_cui.tdf
     Info (12023): Found entity 1: add_sub_cui
-Warning (13012): Latch ram:U3|ram_data~80 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~72 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~64 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~88 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~40 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~48 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~32 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~56 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~16 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~8 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~0 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~24 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~104 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~112 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~96 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~120 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
 Warning (13012): Latch dbufferb:U10|data_latch[0] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|dbfbin_latch
-Warning (13012): Latch ram:U3|ram_data~49 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~81 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~17 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~113 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~73 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~41 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~9 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~105 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~33 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~65 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~1 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~97 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~89 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~57 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~25 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~121 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
 Warning (13012): Latch dbufferb:U10|data_latch[1] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|dbfbin_latch
-Warning (13012): Latch ram:U3|ram_data~50 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~42 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~34 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~58 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~74 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~82 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~66 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~90 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~10 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~18 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~2 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~26 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~114 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~106 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~98 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~122 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
 Warning (13012): Latch dbufferb:U10|data_latch[2] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|dbfbin_latch
-Warning (13012): Latch ram:U3|ram_data~43 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~75 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~11 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~107 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~83 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~51 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~19 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~115 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~67 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~35 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~3 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~99 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~59 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~91 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~27 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~123 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
 Warning (13012): Latch dbufferb:U10|data_latch[3] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|dbfbin_latch
-Warning (13012): Latch ram:U3|ram_data~84 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~76 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~68 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~92 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~44 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~52 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~36 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~60 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~20 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~12 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~4 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~28 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~108 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~116 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~100 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~124 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
 Warning (13012): Latch dbufferb:U10|data_latch[4] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|dbfbin_latch
-Warning (13012): Latch ram:U3|ram_data~53 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~85 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~21 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~117 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~77 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~45 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~13 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~109 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~37 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~69 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~5 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~101 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~93 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~61 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~29 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~125 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
 Warning (13012): Latch dbufferb:U10|data_latch[5] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|dbfbin_latch
-Warning (13012): Latch ram:U3|ram_data~54 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~46 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~38 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~62 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~78 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~86 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~70 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~94 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~14 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~22 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~6 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~30 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~118 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~110 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~102 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~126 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
 Warning (13012): Latch dbufferb:U10|data_latch[6] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|dbfbin_latch
-Warning (13012): Latch ram:U3|ram_data~47 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~79 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~15 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~111 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~87 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~55 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~23 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~119 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~71 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~39 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~7 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~103 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~63 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~95 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~31 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
-Warning (13012): Latch ram:U3|ram_data~127 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|ramrd_latch
 Warning (13012): Latch dbufferb:U10|data_latch[7] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal statectrl:U14|dbfbin_latch
 Warning (13024): Output pins are stuck at VCC or GND
@@ -1290,18 +1087,18 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "sel[4]" is stuck at VCC
     Warning (13410): Pin "sel[5]" is stuck at VCC
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 3 registers lost all their fanouts during netlist optimizations.
+Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 859 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 644 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 812 logic cells
-    Info (21064): Implemented 32 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 300 warnings
-    Info: Peak virtual memory: 4890 megabytes
-    Info: Processing ended: Sat Oct 13 15:52:17 2018
-    Info: Elapsed time: 00:00:26
-    Info: Total CPU time (on all processors): 00:00:47
+    Info (21061): Implemented 589 logic cells
+    Info (21064): Implemented 40 RAM segments
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 44 warnings
+    Info: Peak virtual memory: 4892 megabytes
+    Info: Processing ended: Sat Oct 13 19:05:24 2018
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:43
 
 

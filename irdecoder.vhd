@@ -3,12 +3,12 @@ use ieee.std_logic_1164.all;
 entity irdecoder is
 	port(
 		ird_opcode: in std_logic_vector(4 downto 0);
-		ird_opsignals: out std_logic_vector(8 downto 0)
-		-- ird_opsignals[8:0]: dly, prt, hlt, mov, so, do, jmp, rdm, wtm
+		ird_opsignals: out std_logic_vector(11 downto 0)
+		-- ird_opsignals[9:0]: jnz, dly, prt, hlt, mov, so, do, jmp, rdm, wtm
 	);
 end entity irdecoder;
 architecture behave of irdecoder is
-signal ird_opsignals_latch: std_logic_vector(8 downto 0) := (others => '0');
+signal ird_opsignals_latch: std_logic_vector(11 downto 0) := (others => '0');
 constant HLT: std_logic_vector(4 downto 0) := "00000";
 constant MOV: std_logic_vector(4 downto 0) := "00001";
 constant INC: std_logic_vector(4 downto 0) := "00010";
@@ -29,12 +29,13 @@ constant RDM: std_logic_vector(4 downto 0) := "10000";
 constant WTM: std_logic_vector(4 downto 0) := "10001";
 constant PRT: std_logic_vector(4 downto 0) := "10010";
 constant DLY: std_logic_vector(4 downto 0) := "10011";
+constant JNZ: std_logic_vector(4 downto 0) := "10100";
 begin
 	process(ird_opcode)
 	begin
 		ird_opsignals_latch <= (others => '0');
 		case ird_opcode is
-		--signals: dly, prt, hlt, mov, so, do, jmp, rdm, wtm
+		--signals: jnz, dly, prt, hlt, mov, so, do, jmp, rdm, wtm
 		when HLT => ird_opsignals_latch(6) <= '1';
 		when MOV => ird_opsignals_latch(5) <= '1';
 		when INC => ird_opsignals_latch(4) <= '1';
@@ -55,6 +56,7 @@ begin
 		when WTM => ird_opsignals_latch(0) <= '1';
 		when PRT => ird_opsignals_latch(7) <= '1';
 		when DLY => ird_opsignals_latch(8) <= '1';
+		when JNZ => ird_opsignals_latch(9) <= '1';
 		when others => null;
 		end case;
 	end process;

@@ -1,0 +1,23 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity ram_ctrl is
+	port(
+		ramin: in std_logic;
+		wren: out std_logic;
+		address_in: in std_logic_vector(6 downto 0);
+		address_out: out std_logic_vector(6 downto 0)
+	);
+end ram_ctrl;
+
+architecture arch of ram_ctrl is
+signal address_latch: std_logic_vector(6 downto 0);
+begin
+	process(ramin) begin
+		if ramin'event and ramin = '1' then
+			address_latch <= address_in;
+		end if;
+	end process;
+	address_out <= address_latch;
+	wren <= '1';
+end arch;

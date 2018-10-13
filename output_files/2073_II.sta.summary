@@ -3,120 +3,136 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'statectrl:U14|enalu_latch'
-Slack : -16.682
-TNS   : -187.800
-
-Type  : Slow 1200mV 85C Model Setup 'statectrl:U14|dbfbin_latch'
-Slack : -9.107
-TNS   : -61.106
-
-Type  : Slow 1200mV 85C Model Setup 'ram:U3|ram_address_latch[0]'
-Slack : -9.088
-TNS   : -891.072
-
-Type  : Slow 1200mV 85C Model Setup 'statectrl:U14|ramin_latch'
-Slack : -7.538
-TNS   : -28.318
-
-Type  : Slow 1200mV 85C Model Setup 'rom_new:U4|monostable_trigger:inst3|pulse'
-Slack : -7.148
-TNS   : -27.804
+Slack : -16.331
+TNS   : -181.924
 
 Type  : Slow 1200mV 85C Model Setup 'statectrl:U14|enirin_latch'
-Slack : -6.954
-TNS   : -104.653
+Slack : -7.688
+TNS   : -113.049
+
+Type  : Slow 1200mV 85C Model Setup 'statectrl:U14|dbfbin_latch'
+Slack : -7.436
+TNS   : -51.024
+
+Type  : Slow 1200mV 85C Model Setup 'statectrl:U14|ramin_latch'
+Slack : -7.287
+TNS   : -54.543
+
+Type  : Slow 1200mV 85C Model Setup 'statectrl:U14|ramwt_latch'
+Slack : -7.084
+TNS   : -7.683
 
 Type  : Slow 1200mV 85C Model Setup 'clk_divider:U1|clk_led'
-Slack : -6.143
-TNS   : -48.929
+Slack : -6.154
+TNS   : -50.865
 
 Type  : Slow 1200mV 85C Model Setup 'statectrl:U14|enled_latch'
-Slack : -5.805
-TNS   : -5.805
+Slack : -5.916
+TNS   : -5.916
+
+Type  : Slow 1200mV 85C Model Setup 'rom_new:U4|monostable_trigger:inst3|pulse'
+Slack : -5.534
+TNS   : -26.350
 
 Type  : Slow 1200mV 85C Model Setup 'ir:U5|instruction[10]'
-Slack : -5.432
-TNS   : -148.537
+Slack : -5.446
+TNS   : -155.139
 
 Type  : Slow 1200mV 85C Model Setup 'clk_divider:U1|clk_out'
-Slack : -4.876
-TNS   : -146.658
+Slack : -4.941
+TNS   : -141.649
 
-Type  : Slow 1200mV 85C Model Setup 'statectrl:U14|nextn_latch'
-Slack : -2.803
-TNS   : -22.424
+Type  : Slow 1200mV 85C Model Setup 'statectrl:U14|ramrd_latch'
+Slack : -2.612
+TNS   : -20.896
 
 Type  : Slow 1200mV 85C Model Setup 'clk_input'
-Slack : -2.044
-TNS   : -26.319
+Slack : -2.043
+TNS   : -25.300
+
+Type  : Slow 1200mV 85C Model Setup 'statectrl:U14|nextn_latch'
+Slack : -1.877
+TNS   : -15.016
 
 Type  : Slow 1200mV 85C Model Hold 'clk_divider:U1|clk_out'
-Slack : -2.977
-TNS   : -2.977
+Slack : -2.162
+TNS   : -2.424
 
 Type  : Slow 1200mV 85C Model Hold 'ir:U5|instruction[10]'
-Slack : -0.298
-TNS   : -0.390
-
-Type  : Slow 1200mV 85C Model Hold 'statectrl:U14|enalu_latch'
-Slack : 0.017
-TNS   : 0.000
+Slack : -0.653
+TNS   : -5.326
 
 Type  : Slow 1200mV 85C Model Hold 'statectrl:U14|dbfbin_latch'
-Slack : 0.208
+Slack : -0.008
+TNS   : -0.008
+
+Type  : Slow 1200mV 85C Model Hold 'statectrl:U14|enalu_latch'
+Slack : 0.101
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clk_input'
-Slack : 0.454
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'ram:U3|ram_address_latch[0]'
-Slack : 0.548
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'clk_divider:U1|clk_led'
-Slack : 0.725
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'statectrl:U14|nextn_latch'
-Slack : 0.777
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'statectrl:U14|enled_latch'
-Slack : 0.969
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'statectrl:U14|enirin_latch'
-Slack : 1.977
+Slack : 0.453
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'rom_new:U4|monostable_trigger:inst3|pulse'
-Slack : 2.344
+Slack : 0.464
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'statectrl:U14|enirin_latch'
+Slack : 0.497
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'statectrl:U14|nextn_latch'
+Slack : 0.541
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'statectrl:U14|ramwt_latch'
+Slack : 0.609
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk_divider:U1|clk_led'
+Slack : 0.804
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'statectrl:U14|enled_latch'
+Slack : 0.830
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'statectrl:U14|ramin_latch'
-Slack : 2.537
+Slack : 2.003
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'statectrl:U14|ramrd_latch'
+Slack : 3.025
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Recovery 'statectrl:U14|romin_latch'
-Slack : -1.167
-TNS   : -1.167
+Slack : -1.881
+TNS   : -1.881
 
 Type  : Slow 1200mV 85C Model Recovery 'clk_input'
-Slack : -0.380
-TNS   : -1.140
+Slack : -0.824
+TNS   : -2.472
 
 Type  : Slow 1200mV 85C Model Removal 'clk_input'
-Slack : 0.556
+Slack : 0.832
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'statectrl:U14|romin_latch'
-Slack : 1.591
+Slack : 2.329
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'rom_new:U4|monostable_trigger:inst3|pulse'
 Slack : -3.201
 TNS   : -28.809
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'statectrl:U14|ramrd_latch'
+Slack : -3.201
+TNS   : -25.608
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'statectrl:U14|ramwt_latch'
+Slack : -3.201
+TNS   : -6.402
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'statectrl:U14|enled_latch'
 Slack : -3.201
@@ -128,11 +144,11 @@ TNS   : -37.201
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_divider:U1|clk_out'
 Slack : -1.487
-TNS   : -113.019
+TNS   : -115.986
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ir:U5|instruction[10]'
 Slack : -1.487
-TNS   : -71.376
+TNS   : -72.748
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'statectrl:U14|enirin_latch'
 Slack : -1.487
@@ -152,135 +168,147 @@ TNS   : -11.896
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'statectrl:U14|ramin_latch'
 Slack : -1.487
-TNS   : -5.948
+TNS   : -11.896
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'statectrl:U14|romin_latch'
 Slack : -1.487
 TNS   : -1.487
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ram:U3|ram_address_latch[0]'
-Slack : 0.199
-TNS   : 0.000
-
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'statectrl:U14|dbfbin_latch'
-Slack : 0.347
+Slack : 0.271
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'statectrl:U14|enalu_latch'
-Slack : -15.522
-TNS   : -176.147
+Slack : -15.086
+TNS   : -170.662
 
 Type  : Slow 1200mV 0C Model Setup 'statectrl:U14|dbfbin_latch'
-Slack : -8.726
-TNS   : -58.608
-
-Type  : Slow 1200mV 0C Model Setup 'ram:U3|ram_address_latch[0]'
-Slack : -8.649
-TNS   : -842.857
-
-Type  : Slow 1200mV 0C Model Setup 'statectrl:U14|ramin_latch'
-Slack : -6.908
-TNS   : -26.075
-
-Type  : Slow 1200mV 0C Model Setup 'rom_new:U4|monostable_trigger:inst3|pulse'
-Slack : -6.682
-TNS   : -24.722
+Slack : -7.174
+TNS   : -49.458
 
 Type  : Slow 1200mV 0C Model Setup 'statectrl:U14|enirin_latch'
-Slack : -6.494
-TNS   : -97.091
+Slack : -7.126
+TNS   : -104.342
+
+Type  : Slow 1200mV 0C Model Setup 'statectrl:U14|ramin_latch'
+Slack : -6.742
+TNS   : -50.242
+
+Type  : Slow 1200mV 0C Model Setup 'statectrl:U14|ramwt_latch'
+Slack : -6.589
+TNS   : -7.148
 
 Type  : Slow 1200mV 0C Model Setup 'clk_divider:U1|clk_led'
-Slack : -5.696
-TNS   : -44.819
+Slack : -5.648
+TNS   : -46.308
 
 Type  : Slow 1200mV 0C Model Setup 'statectrl:U14|enled_latch'
-Slack : -5.435
-TNS   : -5.435
+Slack : -5.545
+TNS   : -5.545
 
 Type  : Slow 1200mV 0C Model Setup 'ir:U5|instruction[10]'
-Slack : -5.199
-TNS   : -141.206
+Slack : -5.234
+TNS   : -146.536
+
+Type  : Slow 1200mV 0C Model Setup 'rom_new:U4|monostable_trigger:inst3|pulse'
+Slack : -5.184
+TNS   : -23.384
 
 Type  : Slow 1200mV 0C Model Setup 'clk_divider:U1|clk_out'
-Slack : -4.548
-TNS   : -131.338
+Slack : -4.637
+TNS   : -128.287
 
-Type  : Slow 1200mV 0C Model Setup 'statectrl:U14|nextn_latch'
-Slack : -2.535
-TNS   : -20.280
+Type  : Slow 1200mV 0C Model Setup 'statectrl:U14|ramrd_latch'
+Slack : -2.285
+TNS   : -18.280
 
 Type  : Slow 1200mV 0C Model Setup 'clk_input'
 Slack : -1.701
-TNS   : -21.717
+TNS   : -20.784
+
+Type  : Slow 1200mV 0C Model Setup 'statectrl:U14|nextn_latch'
+Slack : -1.613
+TNS   : -12.904
 
 Type  : Slow 1200mV 0C Model Hold 'clk_divider:U1|clk_out'
-Slack : -2.791
-TNS   : -2.791
+Slack : -1.973
+TNS   : -2.145
 
 Type  : Slow 1200mV 0C Model Hold 'ir:U5|instruction[10]'
-Slack : -0.442
-TNS   : -1.449
-
-Type  : Slow 1200mV 0C Model Hold 'statectrl:U14|enalu_latch'
-Slack : -0.009
-TNS   : -0.009
+Slack : -0.710
+TNS   : -7.407
 
 Type  : Slow 1200mV 0C Model Hold 'statectrl:U14|dbfbin_latch'
-Slack : 0.175
+Slack : -0.028
+TNS   : -0.028
+
+Type  : Slow 1200mV 0C Model Hold 'statectrl:U14|enalu_latch'
+Slack : 0.081
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clk_input'
 Slack : 0.402
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'ram:U3|ram_address_latch[0]'
-Slack : 0.514
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'clk_divider:U1|clk_led'
-Slack : 0.679
+Type  : Slow 1200mV 0C Model Hold 'statectrl:U14|enirin_latch'
+Slack : 0.445
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'statectrl:U14|nextn_latch'
-Slack : 0.722
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'statectrl:U14|enled_latch'
-Slack : 0.812
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'statectrl:U14|enirin_latch'
-Slack : 1.795
+Slack : 0.498
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'rom_new:U4|monostable_trigger:inst3|pulse'
-Slack : 2.102
+Slack : 0.511
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'statectrl:U14|ramwt_latch'
+Slack : 0.570
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk_divider:U1|clk_led'
+Slack : 0.749
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'statectrl:U14|enled_latch'
+Slack : 0.843
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'statectrl:U14|ramin_latch'
-Slack : 2.231
+Slack : 1.928
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'statectrl:U14|ramrd_latch'
+Slack : 2.760
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Recovery 'statectrl:U14|romin_latch'
-Slack : -0.914
-TNS   : -0.914
+Slack : -1.597
+TNS   : -1.597
 
 Type  : Slow 1200mV 0C Model Recovery 'clk_input'
-Slack : -0.210
-TNS   : -0.630
+Slack : -0.664
+TNS   : -1.992
 
 Type  : Slow 1200mV 0C Model Removal 'clk_input'
-Slack : 0.626
+Slack : 0.820
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'statectrl:U14|romin_latch'
-Slack : 1.396
+Slack : 2.107
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'rom_new:U4|monostable_trigger:inst3|pulse'
 Slack : -3.201
 TNS   : -28.809
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'statectrl:U14|ramrd_latch'
+Slack : -3.201
+TNS   : -25.608
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'statectrl:U14|ramwt_latch'
+Slack : -3.201
+TNS   : -6.402
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'statectrl:U14|enled_latch'
 Slack : -3.201
@@ -292,15 +320,15 @@ TNS   : -37.201
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_divider:U1|clk_out'
 Slack : -1.487
-TNS   : -113.627
+TNS   : -116.016
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ir:U5|instruction[10]'
 Slack : -1.487
-TNS   : -72.943
+TNS   : -74.703
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'statectrl:U14|enirin_latch'
 Slack : -1.487
-TNS   : -25.363
+TNS   : -25.279
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_divider:U1|clk_led'
 Slack : -1.487
@@ -316,139 +344,143 @@ TNS   : -11.896
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'statectrl:U14|ramin_latch'
 Slack : -1.487
-TNS   : -5.948
+TNS   : -11.896
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'statectrl:U14|romin_latch'
 Slack : -1.487
 TNS   : -1.487
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ram:U3|ram_address_latch[0]'
-Slack : -0.053
-TNS   : -0.142
-
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'statectrl:U14|dbfbin_latch'
-Slack : 0.184
+Slack : 0.102
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'statectrl:U14|enalu_latch'
-Slack : -6.867
-TNS   : -77.118
-
-Type  : Fast 1200mV 0C Model Setup 'ram:U3|ram_address_latch[0]'
-Slack : -3.735
-TNS   : -345.451
-
-Type  : Fast 1200mV 0C Model Setup 'statectrl:U14|dbfbin_latch'
-Slack : -3.728
-TNS   : -23.940
-
-Type  : Fast 1200mV 0C Model Setup 'statectrl:U14|ramin_latch'
-Slack : -3.183
-TNS   : -11.245
-
-Type  : Fast 1200mV 0C Model Setup 'rom_new:U4|monostable_trigger:inst3|pulse'
-Slack : -2.915
-TNS   : -5.347
+Slack : -6.849
+TNS   : -72.537
 
 Type  : Fast 1200mV 0C Model Setup 'statectrl:U14|enirin_latch'
-Slack : -2.770
-TNS   : -40.212
+Slack : -3.149
+TNS   : -46.441
+
+Type  : Fast 1200mV 0C Model Setup 'statectrl:U14|ramin_latch'
+Slack : -2.986
+TNS   : -22.213
+
+Type  : Fast 1200mV 0C Model Setup 'statectrl:U14|ramwt_latch'
+Slack : -2.893
+TNS   : -2.893
+
+Type  : Fast 1200mV 0C Model Setup 'statectrl:U14|dbfbin_latch'
+Slack : -2.728
+TNS   : -18.228
 
 Type  : Fast 1200mV 0C Model Setup 'statectrl:U14|enled_latch'
-Slack : -2.171
-TNS   : -2.171
+Slack : -2.430
+TNS   : -2.430
+
+Type  : Fast 1200mV 0C Model Setup 'rom_new:U4|monostable_trigger:inst3|pulse'
+Slack : -2.240
+TNS   : -4.832
 
 Type  : Fast 1200mV 0C Model Setup 'ir:U5|instruction[10]'
-Slack : -2.131
-TNS   : -55.733
+Slack : -2.200
+TNS   : -61.044
 
 Type  : Fast 1200mV 0C Model Setup 'clk_divider:U1|clk_led'
-Slack : -1.794
-TNS   : -13.387
+Slack : -1.888
+TNS   : -14.504
 
 Type  : Fast 1200mV 0C Model Setup 'clk_divider:U1|clk_out'
-Slack : -1.578
-TNS   : -30.327
-
-Type  : Fast 1200mV 0C Model Setup 'statectrl:U14|nextn_latch'
-Slack : -0.660
-TNS   : -5.280
+Slack : -1.552
+TNS   : -30.149
 
 Type  : Fast 1200mV 0C Model Setup 'clk_input'
 Slack : -0.350
 TNS   : -1.830
 
+Type  : Fast 1200mV 0C Model Setup 'statectrl:U14|nextn_latch'
+Slack : -0.331
+TNS   : -2.648
+
+Type  : Fast 1200mV 0C Model Setup 'statectrl:U14|ramrd_latch'
+Slack : -0.331
+TNS   : -2.648
+
 Type  : Fast 1200mV 0C Model Hold 'clk_divider:U1|clk_out'
-Slack : -1.298
-TNS   : -1.315
+Slack : -0.988
+TNS   : -1.460
 
 Type  : Fast 1200mV 0C Model Hold 'ir:U5|instruction[10]'
-Slack : -0.259
-TNS   : -1.039
+Slack : -0.226
+TNS   : -1.889
 
-Type  : Fast 1200mV 0C Model Hold 'statectrl:U14|enalu_latch'
-Slack : 0.026
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'ram:U3|ram_address_latch[0]'
-Slack : 0.052
-TNS   : 0.000
+Type  : Fast 1200mV 0C Model Hold 'rom_new:U4|monostable_trigger:inst3|pulse'
+Slack : -0.024
+TNS   : -0.024
 
 Type  : Fast 1200mV 0C Model Hold 'statectrl:U14|dbfbin_latch'
-Slack : 0.109
-TNS   : 0.000
+Slack : -0.016
+TNS   : -0.016
 
-Type  : Fast 1200mV 0C Model Hold 'clk_input'
-Slack : 0.187
+Type  : Fast 1200mV 0C Model Hold 'statectrl:U14|enalu_latch'
+Slack : 0.027
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'statectrl:U14|enled_latch'
-Slack : 0.303
+Slack : 0.123
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'clk_divider:U1|clk_led'
-Slack : 0.305
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'statectrl:U14|nextn_latch'
-Slack : 0.313
+Type  : Fast 1200mV 0C Model Hold 'clk_input'
+Slack : 0.186
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'statectrl:U14|enirin_latch'
-Slack : 0.807
+Slack : 0.208
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'rom_new:U4|monostable_trigger:inst3|pulse'
-Slack : 0.908
+Type  : Fast 1200mV 0C Model Hold 'statectrl:U14|ramwt_latch'
+Slack : 0.210
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'statectrl:U14|nextn_latch'
+Slack : 0.219
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk_divider:U1|clk_led'
+Slack : 0.328
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'statectrl:U14|ramin_latch'
-Slack : 0.994
+Slack : 0.766
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Recovery 'statectrl:U14|romin_latch'
-Slack : -0.037
-TNS   : -0.037
+Type  : Fast 1200mV 0C Model Hold 'statectrl:U14|ramrd_latch'
+Slack : 1.046
+TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'clk_input'
-Slack : -0.016
-TNS   : -0.048
+Slack : -0.390
+TNS   : -1.170
+
+Type  : Fast 1200mV 0C Model Recovery 'statectrl:U14|romin_latch'
+Slack : -0.335
+TNS   : -0.335
 
 Type  : Fast 1200mV 0C Model Removal 'clk_input'
-Slack : 0.106
+Slack : 0.361
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'statectrl:U14|romin_latch'
-Slack : 0.756
+Slack : 1.065
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_input'
 Slack : -3.000
-TNS   : -27.494
+TNS   : -27.475
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_divider:U1|clk_out'
 Slack : -1.000
-TNS   : -76.000
+TNS   : -78.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ir:U5|instruction[10]'
 Slack : -1.000
@@ -476,7 +508,15 @@ TNS   : -8.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'statectrl:U14|ramin_latch'
 Slack : -1.000
-TNS   : -4.000
+TNS   : -8.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'statectrl:U14|ramrd_latch'
+Slack : -1.000
+TNS   : -8.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'statectrl:U14|ramwt_latch'
+Slack : -1.000
+TNS   : -2.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'statectrl:U14|enled_latch'
 Slack : -1.000
@@ -486,12 +526,8 @@ Type  : Fast 1200mV 0C Model Minimum Pulse Width 'statectrl:U14|romin_latch'
 Slack : -1.000
 TNS   : -1.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ram:U3|ram_address_latch[0]'
-Slack : 0.231
-TNS   : 0.000
-
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'statectrl:U14|dbfbin_latch'
-Slack : 0.327
+Slack : 0.343
 TNS   : 0.000
 
 ------------------------------------------------------------

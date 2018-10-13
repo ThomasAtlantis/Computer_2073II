@@ -14,8 +14,9 @@ entity statectrl is
 	port(
 		clk: in std_logic;
 		regf: in std_logic; --from ir
-		opsignals: in std_logic_vector(8 downto 0);
-		--from irdecoder opsignals[8:0]: dly, prt, hlt, mov, so, do, jmp, rdm, wtm
+		zf: in std_logic;
+		opsignals: in std_logic_vector(11 downto 0);
+		--from irdecoder opsignals[9:0]: jnz, dly, prt, hlt, mov, so, do, jmp, rdm, wtm
 		nextn, rstpc, ldpc, enpcout: out std_logic;  --control pc
 		enirin: out std_logic;								--control ir
 		enalu: out std_logic;								--control alu
@@ -108,19 +109,23 @@ begin
 			if (opsignals(5) = '1' and regf = '1') or opsignals(4) = '1' or
 			opsignals(3) = '1' or (opsignals(7) = '1' and regf = '1') then
 				regrd1_latch <= '1';
-			elsif opsignals(2) = '1' then
+			elsif opsignals(2) = '1' or (opsignals(9) = '1' and zf = '0') then
 				ldpc_latch <= '1';
 			elsif (opsignals(5) = '1' and not regf = '1') or ((opsignals(1) = '1' or
 			opsignals(0) = '1') and not regf = '1') or (opsignals(7) = '1' and not regf = '1') then
 				dbfaout_latch <= '1';
 			elsif (regf = '1' and (opsignals(0) = '1' or opsignals(1) = '1')) then
 				regrd2_latch <= '1';
+			elsif (opsignals(9) = '1' and zf = '1') then
+				nextn_latch <= '0';
+				ldpc_latch <= '0';
 			else null;
 			end if;
 			if opsignals(6) = '1' then
 				next_state <= t17;
 			elsif opsignals(5) = '1' or opsignals(4) = '1' or opsignals(3) = '1' or 
-			opsignals(2) = '1' or opsignals(1) = '1' or opsignals(0) = '1' or opsignals(7) = '1' then
+			opsignals(2) = '1' or opsignals(1) = '1' or opsignals(0) = '1' or 
+			opsignals(7) = '1' or (opsignals(9) = '1' and zf = '0') then
 				next_state <= t11;
 			elsif opsignals(8) = '1' then
 				next_state <= t18;
@@ -134,7 +139,7 @@ begin
 				enalu_latch <= '1';
 			elsif opsignals(3) = '1' then
 				dbfbin_latch <= '1';
-			elsif opsignals(2) = '1' then
+			elsif opsignals(2) = '1' or (opsignals(9) = '1' and zf = '0') then
 				nextn_latch <= '1';
 				enpcout_latch <= '1';
 			elsif opsignals(1) = '1' or opsignals(0) = '1' then
@@ -161,7 +166,7 @@ begin
 				else
 					dbfaout_latch <= '1';
 				end if;
-			elsif opsignals(2) = '1' then
+			elsif opsignals(2) = '1' or opsignals(9) = '1' then
 				nextn_latch <= '0';
 				ldpc_latch <= '0';
 			elsif opsignals(1) = '1' then
@@ -188,7 +193,7 @@ begin
 			end if;
 			if opsignals(5) = '1' or opsignals(7) = '1' then
 				next_state <= t1;
-			elsif opsignals(2) = '1' then
+			elsif opsignals(2) = '1' or (opsignals(9) = '1' and zf = '0') then
 				next_state <= t2;
 			else 
 				next_state <= t13;
