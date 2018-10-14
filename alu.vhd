@@ -35,6 +35,8 @@ constant WTM: std_logic_vector(4 downto 0) := "10001";
 constant PRT: std_logic_vector(4 downto 0) := "10010";
 constant DLY: std_logic_vector(4 downto 0) := "10011";
 constant JNZ: std_logic_vector(4 downto 0) := "10100";
+constant RCV: std_logic_vector(4 downto 0) := "10111";
+constant SND: std_logic_vector(4 downto 0) := "11000";
 begin
 	process(alu_enalu)
 	begin
@@ -60,7 +62,9 @@ begin
 			when RDM => alu_result_latch <= alu_src;
 			when WTM => alu_result_latch <= alu_src;
 			when PRT => alu_result_latch <= alu_src;
+			when SND => alu_result_latch <= alu_src;
 			when DLY => alu_result_latch <= alu_src;
+			when RCV => alu_result_latch <= alu_src;
 			when others => alu_result_latch <= "XXXXXXXX";
 			end case;
 		end if;

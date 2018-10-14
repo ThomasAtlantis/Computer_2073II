@@ -1,0 +1,23 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity sync_r_ready is
+	port(
+		r_ready_rst: in std_logic;
+		r_ready_in: in std_logic;
+		r_ready: out std_logic
+	);
+end sync_r_ready;
+
+architecture arch of sync_r_ready is
+signal r_ready_latch: std_logic;
+begin
+	process(r_ready_rst, r_ready_in) begin
+		if r_ready_rst = '1' then
+			r_ready_latch <= '0';
+		else
+			r_ready_latch <= r_ready_in;
+		end if;
+	end process;
+	r_ready <= r_ready_latch;
+end arch;

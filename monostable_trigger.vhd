@@ -3,6 +3,7 @@ use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
 
 entity monostable_trigger is
+	generic(PULSE_WIDTH: integer := 3);
 	port(
 		clk: in std_logic;
 		enable: in std_logic;
@@ -12,7 +13,7 @@ end monostable_trigger;
 
 architecture arch of monostable_trigger is
 signal stop_counter: std_logic := '0';
-signal counter: integer range 0 to 3 := 0;
+signal counter: integer := 0;
 begin
 	process(enable, stop_counter) begin
 		if stop_counter = '1' then
@@ -26,7 +27,7 @@ begin
 			counter <= 0;
 			stop_counter <= '0';
 		elsif clk'event and clk = '1' then
-			if counter = 3 then
+			if counter = PULSE_WIDTH then
 				stop_counter <= '1';
 			else
 				counter <= counter + 1;

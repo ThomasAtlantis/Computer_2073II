@@ -19,7 +19,7 @@ begin
 	variable xcnt16: std_logic_vector(4 downto 0) := "00000"; --定义中间变量
 	variable xbitcnt: integer := 0;
 	variable txds: std_logic;
-	variable txd_content: std_logic_vector(7 downto 0) := "01100110";
+	variable txd_content: std_logic_vector(7 downto 0);
 	begin
 		if resett = '1' then
 			state <= x_idle; --复位，txd 输出保持 1
@@ -29,6 +29,7 @@ begin
 			case state is
 			when x_idle => --状态 1，等待数据帧发送命令
 				if xmit_cmd_p = '1' then
+					txd_content := txdbuf;
 					state <= x_start;
 					txd_done <= '0';
 				else 

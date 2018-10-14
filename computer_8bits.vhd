@@ -115,6 +115,15 @@ package computer_components is
 	);
 	end component;
 	
+	component uart
+	port(
+		clk, rxd, reset, txd_cmd, enuart: in std_logic;
+		r_ready, txd, txd_done: out std_logic;
+		uart_data_in: in std_logic_vector(7 downto 0);
+		uart_data_out: out std_logic_vector(7 downto 0)
+	);
+	end component;
+	
 	component statectrl
 	port(
 		clk: in std_logic;
@@ -130,7 +139,9 @@ package computer_components is
 		regrd1, regrd2, regwt: out std_logic;			--control grctrl
 		enrom, romin: out std_logic;						--control rom
 		ramin, ramrd, ramwt: out std_logic;				--control ram
-		enled: out std_logic									--control ledencoder
+		enled: out std_logic;								--control ledencoder
+		txd_cmd, enuart, uart_reset: out std_logic;
+		r_ready, txd_done: in std_logic
 	);
 	end component;
 	
@@ -144,12 +155,15 @@ entity computer_8bits is
 		--nodes for debug
 		--co_alu_src, co_alu_result: inout std_logic_vector(7 downto 0);
 		--data: out std_logic_vector(7 downto 0);
+		--txd_done: out std_logic;
 		--grcode: out std_logic_vector(5 downto 0);
 		--zf: out std_logic;
 		--nodes for operation
 		clk_input: in std_logic;
 		sel: out std_logic_vector(5 downto 0);
-		dig: out std_logic_vector(7 downto 0)
+		dig: out std_logic_vector(7 downto 0);
+		rxd: in std_logic;
+		txd: out std_logic
 	);
 end entity computer_8bits;
 architecture behave of computer_8bits is
@@ -163,7 +177,8 @@ signal co_clk, co_ramin, co_ramrd, co_ramwt, co_romin,
 co_enrom, co_enirin, co_regf, co_enpcout, co_nextn, 
 co_ldpc, co_pc_rst, co_enalu, co_dbfaout, co_dbfbin,
 co_dbfbout, co_regrd1, co_regrd2, co_regwt, co_enled, 
-co_led_clk, co_zf, zf_latch: std_logic;
+co_led_clk, co_zf, zf_latch, txd_done_latch: std_logic;
+signal co_uart_reset, co_txd_cmd, co_enuart, co_r_ready, co_txd_done: std_logic;
 begin
 	U1: clk_divider port map(clk_in=>clk_input, clk_out=>co_clk, clk_led=>co_led_clk);
 	U2: data_bus port map(bus_data_in=>data_out, bus_data_out=>data_in);
@@ -193,7 +208,26 @@ begin
 		nextn=>co_nextn, rstpc=>co_pc_rst, ldpc=>co_ldpc, enpcout=>co_enpcout, enirin=>co_enirin,
 		enalu=>co_enalu, dbfaout=>co_dbfaout, dbfbin=>co_dbfbin, dbfbout=>co_dbfbout,
 		regrd1=>co_regrd1, regrd2=>co_regrd2, regwt=>co_regwt, enrom=>co_enrom, romin=>co_romin,
-		ramin=>co_ramin, ramrd=>co_ramrd, ramwt=>co_ramwt, enled=>co_enled, zf=>co_zf);
+		ramin=>co_ramin, ramrd=>co_ramrd, ramwt=>co_ramwt, enled=>co_enled, zf=>co_zf,
+		txd_cmd=>co_txd_cmd, enuart=>co_enuart, uart_reset=>co_uart_reset, r_ready=>co_r_ready, 
+		txd_done=>co_txd_done);
+	uart_inst: uart port map(
+			clk => clk_input, 
+			rxd => rxd, 
+			reset => co_uart_reset, 
+			txd_cmd => co_txd_cmd, 
+			enuart => co_enuart,
+			r_ready => co_r_ready, 
+			txd => txd, 
+			txd_done => co_txd_done,
+			uart_data_in => data_in,
+			uart_data_out => data_out
+		);
+--	process(co_txd_done)
+--	begin
+--		txd_done_latch <= co_txd_done;
+--	end process;
+--	txd_done <= txd_done_latch;
 --	process(data_out)
 --	begin
 --		data_latch <= data_out;

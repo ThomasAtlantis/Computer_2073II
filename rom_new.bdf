@@ -72,7 +72,7 @@ agreement for further details.
 	(input)
 	(rect -120 256 48 272)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "rom_clk" (rect 5 0 44 12)(font "Arial" ))
+	(text "rom_clk" (rect 5 0 43 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -247,12 +247,18 @@ agreement for further details.
 		(pt 144 32)
 		(output)
 		(text "pulse" (rect 0 0 25 12)(font "Arial" ))
-		(text "pulse" (rect 102 27 127 39)(font "Arial" ))
+		(text "pulse" (rect 102 27 123 39)(font "Arial" ))
 		(line (pt 144 32)(pt 128 32))
 	)
+	(parameter
+		"PULSE_WIDTH"
+		"3"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
 		(rectangle (rect 16 16 128 64))
 	)
+	(annotation_block (parameter)(rect 64 328 264 360))
 )
 (connector
 	(pt 608 176)
@@ -282,18 +288,6 @@ agreement for further details.
 	(pt 632 160)
 )
 (connector
-	(pt 224 264)
-	(pt 272 264)
-)
-(connector
-	(pt 48 280)
-	(pt 80 280)
-)
-(connector
-	(pt 48 264)
-	(pt 80 264)
-)
-(connector
 	(pt 272 208)
 	(pt 224 208)
 )
@@ -308,5 +302,17 @@ agreement for further details.
 (connector
 	(pt 272 208)
 	(pt 272 248)
+)
+(connector
+	(pt 272 264)
+	(pt 224 264)
+)
+(connector
+	(pt 48 264)
+	(pt 80 264)
+)
+(connector
+	(pt 48 280)
+	(pt 80 280)
 )
 (junction (pt 272 208))

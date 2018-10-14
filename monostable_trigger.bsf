@@ -45,7 +45,13 @@ agreement for further details.
 		(text "pulse" (rect 103 27 123 39)(font "Arial" ))
 		(line (pt 144 32)(pt 128 32)(line_width 1))
 	)
+	(parameter
+		"PULSE_WIDTH"
+		"3"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
 		(rectangle (rect 16 16 128 64)(line_width 1))
 	)
+	(annotation_block (parameter)(rect 160 -64 260 16))
 )
