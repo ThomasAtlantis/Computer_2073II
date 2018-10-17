@@ -232,11 +232,11 @@ begin
 --	begin
 --		data_latch <= data_out;
 --	end process;
+--	data <= data_latch;
 --	process(co_grcode)
 --	begin
 --		grcode_latch <= co_grcode;
 --	end process;
---	data <= data_latch;
 --	grcode <= grcode_latch;
 --	process(co_zf)
 --	begin

@@ -30,6 +30,7 @@ begin
 			when x_idle => --状态 1，等待数据帧发送命令
 				if xmit_cmd_p = '1' then
 					txd_content := txdbuf;
+					xcnt16 := "00000";
 					state <= x_start;
 					txd_done <= '0';
 				else 
@@ -37,10 +38,11 @@ begin
 				end if;
 			when x_start => --状态 2，发送信号至起始位
 				if xcnt16 = "01111" then
-					state <= x_shift;
+					xbitcnt := 0;
 					xcnt16 := "00000";
+					state <= x_shift;
 				else 
-					xcnt16 := xcnt16+1; 
+					xcnt16 := xcnt16 + 1; 
 					txds := '0'; 
 					state <= x_start; --输出开始位，'0'
 				end if;
@@ -60,7 +62,7 @@ begin
 				end if;
 			when x_shift => --状态 4，将待发数据进行并串转换
 				txds := txd_content(xbitcnt);
-				xbitcnt := xbitcnt+1;
+				xbitcnt := xbitcnt + 1;
 				state <= x_wait;
 			when x_stop => --状态 5，停止位发送状态
 				if xcnt16 >= "01111" then
@@ -75,6 +77,7 @@ begin
 				else 
 					xcnt16 := xcnt16+1;
 					txds := '1';
+					txd_done <= '0';
 					state <= x_stop;
 				end if; 
 			when others => 

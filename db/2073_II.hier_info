@@ -2,22 +2,22 @@
 clk_input => clk_divider:U1.clk_in
 clk_input => rom_new:U4.rom_clk
 clk_input => uart:uart_inst.clk
-sel[0] <= led_encoder:U13.led_sel[0]
-sel[1] <= led_encoder:U13.led_sel[1]
-sel[2] <= led_encoder:U13.led_sel[2]
-sel[3] <= led_encoder:U13.led_sel[3]
-sel[4] <= led_encoder:U13.led_sel[4]
-sel[5] <= led_encoder:U13.led_sel[5]
-dig[0] <= led_encoder:U13.led_dig[0]
-dig[1] <= led_encoder:U13.led_dig[1]
-dig[2] <= led_encoder:U13.led_dig[2]
-dig[3] <= led_encoder:U13.led_dig[3]
-dig[4] <= led_encoder:U13.led_dig[4]
-dig[5] <= led_encoder:U13.led_dig[5]
-dig[6] <= led_encoder:U13.led_dig[6]
-dig[7] <= led_encoder:U13.led_dig[7]
+sel[0] << led_encoder:U13.led_sel[0]
+sel[1] << led_encoder:U13.led_sel[1]
+sel[2] << led_encoder:U13.led_sel[2]
+sel[3] << led_encoder:U13.led_sel[3]
+sel[4] << led_encoder:U13.led_sel[4]
+sel[5] << led_encoder:U13.led_sel[5]
+dig[0] << led_encoder:U13.led_dig[0]
+dig[1] << led_encoder:U13.led_dig[1]
+dig[2] << led_encoder:U13.led_dig[2]
+dig[3] << led_encoder:U13.led_dig[3]
+dig[4] << led_encoder:U13.led_dig[4]
+dig[5] << led_encoder:U13.led_dig[5]
+dig[6] << led_encoder:U13.led_dig[6]
+dig[7] << led_encoder:U13.led_dig[7]
 rxd => uart:uart_inst.rxd
-txd <= uart:uart_inst.txd
+txd << uart:uart_inst.txd
 
 
 |computer_8bits|clk_divider:U1
@@ -1433,6 +1433,16 @@ led_dig[7] <= led_dig_temp[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |computer_8bits|statectrl:U14
+clk => counter_dly70[0].CLK
+clk => counter_dly70[1].CLK
+clk => counter_dly70[2].CLK
+clk => counter_dly70[3].CLK
+clk => counter_dly70[4].CLK
+clk => counter_dly70[5].CLK
+clk => counter_dly70[6].CLK
+clk => counter_dly70[7].CLK
+clk => counter_dly70[8].CLK
+clk => counter_dly70[9].CLK
 clk => counter[0].CLK
 clk => counter[1].CLK
 clk => counter[2].CLK
@@ -1500,6 +1510,7 @@ opsignals[0] => ramin_latch.OUTPUTSELECT
 opsignals[0] => enled_latch.OUTPUTSELECT
 opsignals[0] => enuart_latch.OUTPUTSELECT
 opsignals[0] => uart_reset_latch.OUTPUTSELECT
+opsignals[0] => txd_cmd_latch.OUTPUTSELECT
 opsignals[0] => ramwt_latch.OUTPUTSELECT
 opsignals[0] => ramwt_latch.OUTPUTSELECT
 opsignals[0] => regrd1_latch.OUTPUTSELECT
@@ -1514,6 +1525,7 @@ opsignals[1] => ramrd_latch.OUTPUTSELECT
 opsignals[1] => enled_latch.OUTPUTSELECT
 opsignals[1] => enuart_latch.OUTPUTSELECT
 opsignals[1] => uart_reset_latch.OUTPUTSELECT
+opsignals[1] => txd_cmd_latch.OUTPUTSELECT
 opsignals[1] => process_0.IN0
 opsignals[1] => regwt_latch.OUTPUTSELECT
 opsignals[1] => ramrd_latch.OUTPUTSELECT
@@ -1542,6 +1554,7 @@ opsignals[3] => ramrd_latch.OUTPUTSELECT
 opsignals[3] => enled_latch.OUTPUTSELECT
 opsignals[3] => enuart_latch.OUTPUTSELECT
 opsignals[3] => uart_reset_latch.OUTPUTSELECT
+opsignals[3] => txd_cmd_latch.OUTPUTSELECT
 opsignals[3] => enalu_latch.OUTPUTSELECT
 opsignals[3] => ramwt_latch.OUTPUTSELECT
 opsignals[3] => regrd2_latch.OUTPUTSELECT
@@ -1577,6 +1590,7 @@ opsignals[4] => ramrd_latch.OUTPUTSELECT
 opsignals[4] => enled_latch.OUTPUTSELECT
 opsignals[4] => enuart_latch.OUTPUTSELECT
 opsignals[4] => uart_reset_latch.OUTPUTSELECT
+opsignals[4] => txd_cmd_latch.OUTPUTSELECT
 opsignals[4] => process_0.IN1
 opsignals[4] => dbfbout_latch.OUTPUTSELECT
 opsignals[4] => regwt_latch.OUTPUTSELECT
@@ -1601,6 +1615,7 @@ opsignals[5] => ramrd_latch.OUTPUTSELECT
 opsignals[5] => enled_latch.OUTPUTSELECT
 opsignals[5] => enuart_latch.OUTPUTSELECT
 opsignals[5] => uart_reset_latch.OUTPUTSELECT
+opsignals[5] => txd_cmd_latch.OUTPUTSELECT
 opsignals[5] => process_0.IN0
 opsignals[6] => next_state.OUTPUTSELECT
 opsignals[6] => next_state.OUTPUTSELECT
@@ -1617,6 +1632,7 @@ opsignals[7] => dbfaout_latch.OUTPUTSELECT
 opsignals[7] => enled_latch.OUTPUTSELECT
 opsignals[7] => enuart_latch.OUTPUTSELECT
 opsignals[7] => uart_reset_latch.OUTPUTSELECT
+opsignals[7] => txd_cmd_latch.OUTPUTSELECT
 opsignals[7] => process_0.IN1
 opsignals[8] => next_state.OUTPUTSELECT
 opsignals[8] => next_state.OUTPUTSELECT
@@ -1632,6 +1648,7 @@ opsignals[10] => process_0.IN1
 opsignals[10] => regwt_latch.OUTPUTSELECT
 opsignals[10] => enuart_latch.OUTPUTSELECT
 opsignals[10] => uart_reset_latch.OUTPUTSELECT
+opsignals[10] => txd_cmd_latch.OUTPUTSELECT
 opsignals[10] => process_0.IN1
 opsignals[10] => process_0.IN0
 opsignals[10] => next_state.DATAA
@@ -1640,12 +1657,11 @@ opsignals[11] => dbfaout_latch.OUTPUTSELECT
 opsignals[11] => uart_reset_latch.OUTPUTSELECT
 opsignals[11] => process_0.IN1
 opsignals[11] => txd_cmd_latch.OUTPUTSELECT
-opsignals[11] => uart_reset_latch.OUTPUTSELECT
+opsignals[11] => txd_cmd_latch.OUTPUTSELECT
 opsignals[11] => process_0.IN1
 opsignals[11] => process_0.IN0
 opsignals[11] => regrd1_latch.OUTPUTSELECT
 opsignals[11] => dbfaout_latch.OUTPUTSELECT
-opsignals[11] => txd_cmd_latch.OUTPUTSELECT
 opsignals[11] => Selector23.IN4
 opsignals[11] => Selector22.IN1
 nextn <= nextn_latch.DB_MAX_OUTPUT_PORT_TYPE
@@ -1807,16 +1823,21 @@ xmit_cmd_p => txd_content.OUTPUTSELECT
 xmit_cmd_p => txd_content.OUTPUTSELECT
 xmit_cmd_p => txd_content.OUTPUTSELECT
 xmit_cmd_p => txd_content.OUTPUTSELECT
+xmit_cmd_p => xcnt16.OUTPUTSELECT
+xmit_cmd_p => xcnt16.OUTPUTSELECT
+xmit_cmd_p => xcnt16.OUTPUTSELECT
+xmit_cmd_p => xcnt16.OUTPUTSELECT
+xmit_cmd_p => xcnt16.OUTPUTSELECT
 xmit_cmd_p => txd_done.OUTPUTSELECT
 xmit_cmd_p => state.DATAB
-xmit_cmd_p => Selector1.IN3
+xmit_cmd_p => Selector6.IN3
 xmit_cmd_p => xcnt16.OUTPUTSELECT
 xmit_cmd_p => xcnt16.OUTPUTSELECT
 xmit_cmd_p => xcnt16.OUTPUTSELECT
 xmit_cmd_p => xcnt16.OUTPUTSELECT
 xmit_cmd_p => xcnt16.OUTPUTSELECT
 xmit_cmd_p => state.DATAB
-xmit_cmd_p => Selector0.IN1
+xmit_cmd_p => Selector5.IN1
 txdbuf[0] => txd_content.DATAB
 txdbuf[1] => txd_content.DATAB
 txdbuf[2] => txd_content.DATAB

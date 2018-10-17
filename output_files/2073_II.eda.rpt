@@ -1,5 +1,5 @@
 EDA Netlist Writer report for 2073_II
-Sun Oct 14 23:08:31 2018
+Tue Oct 16 12:25:51 2018
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Sun Oct 14 23:08:31 2018 ;
+; EDA Netlist Writer Status ; Successful - Tue Oct 16 12:25:51 2018 ;
 ; Revision Name             ; 2073_II                               ;
 ; Top-level Entity Name     ; computer_8bits                        ;
 ; Family                    ; Cyclone IV E                          ;
@@ -45,42 +45,34 @@ agreement for further details.
 +---------------------------+---------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Simulation Settings                                                                                                 ;
-+---------------------------------------------------------------------------------------------------+-----------------+
-; Option                                                                                            ; Setting         ;
-+---------------------------------------------------------------------------------------------------+-----------------+
-; Tool Name                                                                                         ; ModelSim (VHDL) ;
-; Generate netlist for functional simulation only                                                   ; Off             ;
-; Time scale                                                                                        ; 1 ps            ;
-; Truncate long hierarchy paths                                                                     ; Off             ;
-; Map illegal HDL characters                                                                        ; Off             ;
-; Flatten buses into individual nodes                                                               ; Off             ;
-; Maintain hierarchy                                                                                ; Off             ;
-; Bring out device-wide set/reset signals as ports                                                  ; Off             ;
-; Enable glitch filtering                                                                           ; Off             ;
-; Do not write top level VHDL entity                                                                ; Off             ;
-; Disable detection of setup and hold time violations in the input registers of bi-directional pins ; Off             ;
-; Architecture name in VHDL output netlist                                                          ; structure       ;
-; Generate third-party EDA tool command script for RTL functional simulation                        ; Off             ;
-; Generate third-party EDA tool command script for gate-level simulation                            ; Off             ;
-+---------------------------------------------------------------------------------------------------+-----------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Simulation Settings                                                                                                           ;
++---------------------------------------------------------------------------------------------------+---------------------------+
+; Option                                                                                            ; Setting                   ;
++---------------------------------------------------------------------------------------------------+---------------------------+
+; Tool Name                                                                                         ; ModelSim-Altera (Verilog) ;
+; Generate netlist for functional simulation only                                                   ; On                        ;
+; Truncate long hierarchy paths                                                                     ; Off                       ;
+; Map illegal HDL characters                                                                        ; Off                       ;
+; Flatten buses into individual nodes                                                               ; Off                       ;
+; Maintain hierarchy                                                                                ; Off                       ;
+; Bring out device-wide set/reset signals as ports                                                  ; Off                       ;
+; Enable glitch filtering                                                                           ; Off                       ;
+; Do not write top level VHDL entity                                                                ; Off                       ;
+; Disable detection of setup and hold time violations in the input registers of bi-directional pins ; Off                       ;
+; Architecture name in VHDL output netlist                                                          ; structure                 ;
+; Generate third-party EDA tool command script for RTL functional simulation                        ; Off                       ;
+; Generate third-party EDA tool command script for gate-level simulation                            ; Off                       ;
++---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                               ;
-+------------------------------------------------------------------------------------------+
-; Generated Files                                                                          ;
-+------------------------------------------------------------------------------------------+
-; F:/Quartus_II/QuartusWork/2073_II/simulation/modelsim/2073_II_8_1200mv_85c_slow.vho      ;
-; F:/Quartus_II/QuartusWork/2073_II/simulation/modelsim/2073_II_8_1200mv_0c_slow.vho       ;
-; F:/Quartus_II/QuartusWork/2073_II/simulation/modelsim/2073_II_min_1200mv_0c_fast.vho     ;
-; F:/Quartus_II/QuartusWork/2073_II/simulation/modelsim/2073_II.vho                        ;
-; F:/Quartus_II/QuartusWork/2073_II/simulation/modelsim/2073_II_8_1200mv_85c_vhd_slow.sdo  ;
-; F:/Quartus_II/QuartusWork/2073_II/simulation/modelsim/2073_II_8_1200mv_0c_vhd_slow.sdo   ;
-; F:/Quartus_II/QuartusWork/2073_II/simulation/modelsim/2073_II_min_1200mv_0c_vhd_fast.sdo ;
-; F:/Quartus_II/QuartusWork/2073_II/simulation/modelsim/2073_II_vhd.sdo                    ;
-+------------------------------------------------------------------------------------------+
++---------------------------------------------------------------+
+; Simulation Generated Files                                    ;
++---------------------------------------------------------------+
+; Generated Files                                               ;
++---------------------------------------------------------------+
+; F:/Quartus_II/QuartusWork/2073_II/simulation/qsim//2073_II.vo ;
++---------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -89,20 +81,27 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Full Version
-    Info: Processing started: Sun Oct 14 23:08:26 2018
-Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off 2073_II -c 2073_II
-Info (204019): Generated file 2073_II_8_1200mv_85c_slow.vho in folder "F:/Quartus_II/QuartusWork/2073_II/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file 2073_II_8_1200mv_0c_slow.vho in folder "F:/Quartus_II/QuartusWork/2073_II/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file 2073_II_min_1200mv_0c_fast.vho in folder "F:/Quartus_II/QuartusWork/2073_II/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file 2073_II.vho in folder "F:/Quartus_II/QuartusWork/2073_II/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file 2073_II_8_1200mv_85c_vhd_slow.sdo in folder "F:/Quartus_II/QuartusWork/2073_II/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file 2073_II_8_1200mv_0c_vhd_slow.sdo in folder "F:/Quartus_II/QuartusWork/2073_II/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file 2073_II_min_1200mv_0c_vhd_fast.sdo in folder "F:/Quartus_II/QuartusWork/2073_II/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file 2073_II_vhd.sdo in folder "F:/Quartus_II/QuartusWork/2073_II/simulation/modelsim/" for EDA simulation tool
+    Info: Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+    Info: Subscription Agreement, the Altera Quartus II License Agreement,
+    Info: the Altera MegaCore Function License Agreement, or other 
+    Info: applicable license agreement, including, without limitation, 
+    Info: that your use is for the sole purpose of programming logic 
+    Info: devices manufactured by Altera and sold by Altera or its 
+    Info: authorized distributors.  Please refer to the applicable 
+    Info: agreement for further details.
+    Info: Processing started: Tue Oct 16 12:25:50 2018
+Info: Command: quartus_eda --write_settings_files=off --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=F:/Quartus_II/QuartusWork/2073_II/simulation/qsim/ 2073_II -c 2073_II
+Info (204019): Generated file 2073_II.vo in folder "F:/Quartus_II/QuartusWork/2073_II/simulation/qsim//" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4753 megabytes
-    Info: Processing ended: Sun Oct 14 23:08:31 2018
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Peak virtual memory: 4737 megabytes
+    Info: Processing ended: Tue Oct 16 12:25:52 2018
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 

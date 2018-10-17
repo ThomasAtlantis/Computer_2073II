@@ -1,5 +1,5 @@
 Analysis & Synthesis report for 2073_II
-Sun Oct 14 23:07:20 2018
+Tue Oct 16 12:15:56 2018
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
 
 
@@ -69,15 +69,15 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Oct 14 23:07:19 2018       ;
+; Analysis & Synthesis Status        ; Successful - Tue Oct 16 12:15:56 2018       ;
 ; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 SJ Full Version ;
 ; Revision Name                      ; 2073_II                                     ;
 ; Top-level Entity Name              ; computer_8bits                              ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 995                                         ;
-;     Total combinational functions  ; 886                                         ;
-;     Dedicated logic registers      ; 439                                         ;
-; Total registers                    ; 439                                         ;
+; Total logic elements               ; 1,024                                       ;
+;     Total combinational functions  ; 914                                         ;
+;     Dedicated logic registers      ; 451                                         ;
+; Total registers                    ; 451                                         ;
 ; Total pins                         ; 17                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 10,240                                      ;
@@ -251,20 +251,20 @@ agreement for further details.
 +---------------------------------------------+-----------------+
 ; Resource                                    ; Usage           ;
 +---------------------------------------------+-----------------+
-; Estimated Total logic elements              ; 995             ;
+; Estimated Total logic elements              ; 1,024           ;
 ;                                             ;                 ;
-; Total combinational functions               ; 886             ;
+; Total combinational functions               ; 914             ;
 ; Logic element usage by number of LUT inputs ;                 ;
-;     -- 4 input functions                    ; 400             ;
-;     -- 3 input functions                    ; 161             ;
-;     -- <=2 input functions                  ; 325             ;
+;     -- 4 input functions                    ; 402             ;
+;     -- 3 input functions                    ; 170             ;
+;     -- <=2 input functions                  ; 342             ;
 ;                                             ;                 ;
 ; Logic elements by mode                      ;                 ;
-;     -- normal mode                          ; 611             ;
-;     -- arithmetic mode                      ; 275             ;
+;     -- normal mode                          ; 630             ;
+;     -- arithmetic mode                      ; 284             ;
 ;                                             ;                 ;
-; Total registers                             ; 439             ;
-;     -- Dedicated logic registers            ; 439             ;
+; Total registers                             ; 451             ;
+;     -- Dedicated logic registers            ; 451             ;
 ;     -- I/O registers                        ; 0               ;
 ;                                             ;                 ;
 ; I/O pins                                    ; 17              ;
@@ -274,8 +274,8 @@ agreement for further details.
 ;                                             ;                 ;
 ; Maximum fan-out node                        ; clk_input~input ;
 ; Maximum fan-out                             ; 152             ;
-; Total fan-out                               ; 4439            ;
-; Average fan-out                             ; 3.17            ;
+; Total fan-out                               ; 4545            ;
+; Average fan-out                             ; 3.16            ;
 +---------------------------------------------+-----------------+
 
 
@@ -284,8 +284,8 @@ agreement for further details.
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                        ; Library Name ;
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------+--------------+
-; |computer_8bits                              ; 886 (64)          ; 439 (0)      ; 10240       ; 0            ; 0       ; 0         ; 17   ; 0            ; |computer_8bits                                                                                            ; work         ;
-;    |alu:U8|                                  ; 244 (227)         ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|alu:U8                                                                                     ; work         ;
+; |computer_8bits                              ; 914 (64)          ; 451 (0)      ; 10240       ; 0            ; 0       ; 0         ; 17   ; 0            ; |computer_8bits                                                                                            ; work         ;
+;    |alu:U8|                                  ; 251 (234)         ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|alu:U8                                                                                     ; work         ;
 ;       |lpm_add_sub:Add2|                     ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|alu:U8|lpm_add_sub:Add2                                                                    ; work         ;
 ;          |add_sub_cui:auto_generated|        ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|alu:U8|lpm_add_sub:Add2|add_sub_cui:auto_generated                                         ; work         ;
 ;    |clk_divider:U1|                          ; 18 (18)           ; 20 (20)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|clk_divider:U1                                                                             ; work         ;
@@ -293,7 +293,7 @@ agreement for further details.
 ;    |gr:U12|                                  ; 1 (1)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|gr:U12                                                                                     ; work         ;
 ;    |grctrl:U11|                              ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|grctrl:U11                                                                                 ; work         ;
 ;    |ir:U5|                                   ; 5 (5)             ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|ir:U5                                                                                      ; work         ;
-;    |irdecoder:U6|                            ; 18 (18)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|irdecoder:U6                                                                               ; work         ;
+;    |irdecoder:U6|                            ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|irdecoder:U6                                                                               ; work         ;
 ;    |led_encoder:U13|                         ; 20 (20)           ; 13 (13)      ; 6144        ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|led_encoder:U13                                                                            ; work         ;
 ;       |altsyncram:Ram0_rtl_0|                ; 0 (0)             ; 0 (0)        ; 6144        ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|led_encoder:U13|altsyncram:Ram0_rtl_0                                                      ; work         ;
 ;          |altsyncram_r771:auto_generated|    ; 0 (0)             ; 0 (0)        ; 6144        ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|led_encoder:U13|altsyncram:Ram0_rtl_0|altsyncram_r771:auto_generated                       ; work         ;
@@ -308,14 +308,14 @@ agreement for further details.
 ;       |rom_new_rom:inst|                     ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|rom_new:U4|rom_new_rom:inst                                                                ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|rom_new:U4|rom_new_rom:inst|altsyncram:altsyncram_component                                ; work         ;
 ;             |altsyncram_kdr3:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|rom_new:U4|rom_new_rom:inst|altsyncram:altsyncram_component|altsyncram_kdr3:auto_generated ; work         ;
-;    |statectrl:U14|                           ; 159 (159)         ; 81 (81)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|statectrl:U14                                                                              ; work         ;
-;    |uart:uart_inst|                          ; 283 (0)           ; 218 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|uart:uart_inst                                                                             ; work         ;
+;    |statectrl:U14|                           ; 177 (177)         ; 93 (93)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|statectrl:U14                                                                              ; work         ;
+;    |uart:uart_inst|                          ; 287 (0)           ; 218 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|uart:uart_inst                                                                             ; work         ;
 ;       |baud_gen:inst|                        ; 42 (42)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|uart:uart_inst|baud_gen:inst                                                               ; work         ;
 ;       |latch_8bits:inst3|                    ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|uart:uart_inst|latch_8bits:inst3                                                           ; work         ;
 ;       |monostable_trigger:inst7|             ; 44 (44)           ; 34 (34)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|uart:uart_inst|monostable_trigger:inst7                                                    ; work         ;
 ;       |monostable_trigger:inst8|             ; 44 (44)           ; 34 (34)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|uart:uart_inst|monostable_trigger:inst8                                                    ; work         ;
 ;       |rxd:inst1|                            ; 73 (73)           ; 57 (57)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|uart:uart_inst|rxd:inst1                                                                   ; work         ;
-;       |txd:inst2|                            ; 80 (80)           ; 52 (52)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|uart:uart_inst|txd:inst2                                                                   ; work         ;
+;       |txd:inst2|                            ; 84 (84)           ; 52 (52)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer_8bits|uart:uart_inst|txd:inst2                                                                   ; work         ;
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -369,61 +369,63 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |computer_8bits|statectrl:U14|current_state                                                                                                                                                                                                                                                                                                                                                                          ;
-+-----------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+-----------------------+-----------------------+
-; Name                  ; current_state.t18 ; current_state.t17 ; current_state.t16 ; current_state.t15 ; current_state.t14 ; current_state.t13 ; current_state.t12 ; current_state.t11 ; current_state.t10 ; current_state.t9 ; current_state.t8 ; current_state.t7 ; current_state.t6 ; current_state.t5 ; current_state.t4 ; current_state.t3 ; current_state.t2 ; current_state.t1 ; current_state.t_rst_2 ; current_state.t_rst_1 ;
-+-----------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+-----------------------+-----------------------+
-; current_state.t_rst_1 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                     ; 0                     ;
-; current_state.t_rst_2 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                     ; 1                     ;
-; current_state.t1      ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                     ; 1                     ;
-; current_state.t2      ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                     ; 1                     ;
-; current_state.t3      ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                     ; 1                     ;
-; current_state.t4      ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                     ; 1                     ;
-; current_state.t5      ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                     ; 1                     ;
-; current_state.t6      ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                     ; 1                     ;
-; current_state.t7      ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                     ; 1                     ;
-; current_state.t8      ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                     ; 1                     ;
-; current_state.t9      ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                     ; 1                     ;
-; current_state.t10     ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                     ; 1                     ;
-; current_state.t11     ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                     ; 1                     ;
-; current_state.t12     ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                     ; 1                     ;
-; current_state.t13     ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                     ; 1                     ;
-; current_state.t14     ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                     ; 1                     ;
-; current_state.t15     ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                     ; 1                     ;
-; current_state.t16     ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                     ; 1                     ;
-; current_state.t17     ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                     ; 1                     ;
-; current_state.t18     ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                     ; 1                     ;
-+-----------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+-----------------------+-----------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |computer_8bits|statectrl:U14|current_state                                                                                                                                                                                                                                                                                                                                                                                                  ;
++-----------------------+-----------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+-----------------------+-----------------------+
+; Name                  ; current_state.t_dly70 ; current_state.t18 ; current_state.t17 ; current_state.t16 ; current_state.t15 ; current_state.t14 ; current_state.t13 ; current_state.t12 ; current_state.t11 ; current_state.t10 ; current_state.t9 ; current_state.t8 ; current_state.t7 ; current_state.t6 ; current_state.t5 ; current_state.t4 ; current_state.t3 ; current_state.t2 ; current_state.t1 ; current_state.t_rst_2 ; current_state.t_rst_1 ;
++-----------------------+-----------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+-----------------------+-----------------------+
+; current_state.t_rst_1 ; 0                     ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                     ; 0                     ;
+; current_state.t_rst_2 ; 0                     ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                     ; 1                     ;
+; current_state.t1      ; 0                     ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                     ; 1                     ;
+; current_state.t2      ; 0                     ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                     ; 1                     ;
+; current_state.t3      ; 0                     ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                     ; 1                     ;
+; current_state.t4      ; 0                     ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                     ; 1                     ;
+; current_state.t5      ; 0                     ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                     ; 1                     ;
+; current_state.t6      ; 0                     ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                     ; 1                     ;
+; current_state.t7      ; 0                     ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                     ; 1                     ;
+; current_state.t8      ; 0                     ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                     ; 1                     ;
+; current_state.t9      ; 0                     ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                     ; 1                     ;
+; current_state.t10     ; 0                     ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                     ; 1                     ;
+; current_state.t11     ; 0                     ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                     ; 1                     ;
+; current_state.t12     ; 0                     ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                     ; 1                     ;
+; current_state.t13     ; 0                     ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                     ; 1                     ;
+; current_state.t14     ; 0                     ; 0                 ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                     ; 1                     ;
+; current_state.t15     ; 0                     ; 0                 ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                     ; 1                     ;
+; current_state.t16     ; 0                     ; 0                 ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                     ; 1                     ;
+; current_state.t17     ; 0                     ; 0                 ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                     ; 1                     ;
+; current_state.t18     ; 0                     ; 1                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                     ; 1                     ;
+; current_state.t_dly70 ; 1                     ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                     ; 1                     ;
++-----------------------+-----------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+-----------------------+-----------------------+
 
 
 Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |computer_8bits|statectrl:U14|next_state                                                                                                                                                                                                                                                                                                              ;
-+--------------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+--------------------+--------------------+
-; Name               ; next_state.t18 ; next_state.t17 ; next_state.t16 ; next_state.t15 ; next_state.t14 ; next_state.t13 ; next_state.t12 ; next_state.t11 ; next_state.t10 ; next_state.t9 ; next_state.t8 ; next_state.t7 ; next_state.t6 ; next_state.t5 ; next_state.t4 ; next_state.t3 ; next_state.t2 ; next_state.t1 ; next_state.t_rst_2 ; next_state.t_rst_1 ;
-+--------------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+--------------------+--------------------+
-; next_state.t_rst_1 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                  ; 0                  ;
-; next_state.t_rst_2 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1                  ; 1                  ;
-; next_state.t1      ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0                  ; 1                  ;
-; next_state.t2      ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0                  ; 1                  ;
-; next_state.t3      ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0                  ; 1                  ;
-; next_state.t4      ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0                  ; 1                  ;
-; next_state.t5      ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0                  ; 1                  ;
-; next_state.t6      ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                  ; 1                  ;
-; next_state.t7      ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                  ; 1                  ;
-; next_state.t8      ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                  ; 1                  ;
-; next_state.t9      ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                  ; 1                  ;
-; next_state.t10     ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                  ; 1                  ;
-; next_state.t11     ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                  ; 1                  ;
-; next_state.t12     ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                  ; 1                  ;
-; next_state.t13     ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                  ; 1                  ;
-; next_state.t14     ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                  ; 1                  ;
-; next_state.t15     ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                  ; 1                  ;
-; next_state.t16     ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                  ; 1                  ;
-; next_state.t17     ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                  ; 1                  ;
-; next_state.t18     ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                  ; 1                  ;
-+--------------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+--------------------+--------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |computer_8bits|statectrl:U14|next_state                                                                                                                                                                                                                                                                                                                                   ;
++--------------------+--------------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+--------------------+--------------------+
+; Name               ; next_state.t_dly70 ; next_state.t18 ; next_state.t17 ; next_state.t16 ; next_state.t15 ; next_state.t14 ; next_state.t13 ; next_state.t12 ; next_state.t11 ; next_state.t10 ; next_state.t9 ; next_state.t8 ; next_state.t7 ; next_state.t6 ; next_state.t5 ; next_state.t4 ; next_state.t3 ; next_state.t2 ; next_state.t1 ; next_state.t_rst_2 ; next_state.t_rst_1 ;
++--------------------+--------------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+--------------------+--------------------+
+; next_state.t_rst_1 ; 0                  ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                  ; 0                  ;
+; next_state.t_rst_2 ; 0                  ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1                  ; 1                  ;
+; next_state.t1      ; 0                  ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0                  ; 1                  ;
+; next_state.t2      ; 0                  ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0                  ; 1                  ;
+; next_state.t3      ; 0                  ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0                  ; 1                  ;
+; next_state.t4      ; 0                  ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0                  ; 1                  ;
+; next_state.t5      ; 0                  ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0                  ; 1                  ;
+; next_state.t6      ; 0                  ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                  ; 1                  ;
+; next_state.t7      ; 0                  ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                  ; 1                  ;
+; next_state.t8      ; 0                  ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                  ; 1                  ;
+; next_state.t9      ; 0                  ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                  ; 1                  ;
+; next_state.t10     ; 0                  ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                  ; 1                  ;
+; next_state.t11     ; 0                  ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                  ; 1                  ;
+; next_state.t12     ; 0                  ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                  ; 1                  ;
+; next_state.t13     ; 0                  ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                  ; 1                  ;
+; next_state.t14     ; 0                  ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                  ; 1                  ;
+; next_state.t15     ; 0                  ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                  ; 1                  ;
+; next_state.t16     ; 0                  ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                  ; 1                  ;
+; next_state.t17     ; 0                  ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                  ; 1                  ;
+; next_state.t18     ; 0                  ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                  ; 1                  ;
+; next_state.t_dly70 ; 1                  ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0                  ; 1                  ;
++--------------------+--------------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+--------------------+--------------------+
 
 
 +----------------------------------------------------------------------------------------------------------+
@@ -460,12 +462,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 439   ;
+; Total registers                              ; 451   ;
 ; Number of registers using Synchronous Clear  ; 104   ;
 ; Number of registers using Synchronous Load   ; 8     ;
 ; Number of registers using Asynchronous Clear ; 117   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 214   ;
+; Number of registers using Clock Enable       ; 228   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -503,15 +505,15 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
 ; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |computer_8bits|pc:U7|addr_latch[7]                     ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |computer_8bits|uart:uart_inst|rxd:inst1|\pro2:rcnt[31] ;
-; 5:1                ; 32 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; Yes        ; |computer_8bits|uart:uart_inst|txd:inst2|xbitcnt[30]    ;
-; 8:1                ; 5 bits    ; 25 LEs        ; 5 LEs                ; 20 LEs                 ; Yes        ; |computer_8bits|uart:uart_inst|txd:inst2|xcnt16[0]      ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |computer_8bits|led_encoder:U13|led_dig_temp[1]         ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |computer_8bits|grctrl:U11|grc_grrd[3]                  ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |computer_8bits|grctrl:U11|grc_grwt[2]                  ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |computer_8bits|uart:uart_inst|rxd:inst1|\pro2:rcnt[25] ;
+; 7:1                ; 32 bits   ; 128 LEs       ; 32 LEs               ; 96 LEs                 ; Yes        ; |computer_8bits|uart:uart_inst|txd:inst2|xbitcnt[15]    ;
+; 10:1               ; 5 bits    ; 30 LEs        ; 5 LEs                ; 25 LEs                 ; Yes        ; |computer_8bits|uart:uart_inst|txd:inst2|xcnt16[4]      ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |computer_8bits|led_encoder:U13|led_dig_temp[3]         ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |computer_8bits|grctrl:U11|grc_grrd[0]                  ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |computer_8bits|grctrl:U11|grc_grwt[3]                  ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |computer_8bits|grctrl:U11|grc_grwt[0]                  ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |computer_8bits|uart:uart_inst|rxd:inst1|state          ;
-; 10:1               ; 8 bits    ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |computer_8bits|data_out[4]                             ;
+; 10:1               ; 8 bits    ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |computer_8bits|data_out[7]                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
 
 
@@ -710,7 +712,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                        ;
 +----------------+-------+-------------------------------------------------------------+
-; pulse_width    ; 10    ; Signed Integer                                              ;
+; pulse_width    ; 30    ; Signed Integer                                              ;
 +----------------+-------+-------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -872,28 +874,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 17                          ;
-; cycloneiii_ff         ; 439                         ;
+; cycloneiii_ff         ; 451                         ;
 ;     CLR               ; 20                          ;
-;     ENA               ; 53                          ;
+;     ENA               ; 67                          ;
 ;     ENA CLR           ; 97                          ;
 ;     ENA SCLR          ; 64                          ;
 ;     SCLR              ; 32                          ;
 ;     SCLR SLD          ; 8                           ;
-;     plain             ; 165                         ;
-; cycloneiii_lcell_comb ; 896                         ;
-;     arith             ; 275                         ;
-;         2 data inputs ; 237                         ;
+;     plain             ; 163                         ;
+; cycloneiii_lcell_comb ; 924                         ;
+;     arith             ; 284                         ;
+;         2 data inputs ; 246                         ;
 ;         3 data inputs ; 38                          ;
-;     normal            ; 621                         ;
+;     normal            ; 640                         ;
 ;         0 data inputs ; 4                           ;
-;         1 data inputs ; 27                          ;
-;         2 data inputs ; 67                          ;
-;         3 data inputs ; 123                         ;
-;         4 data inputs ; 400                         ;
+;         1 data inputs ; 28                          ;
+;         2 data inputs ; 74                          ;
+;         3 data inputs ; 132                         ;
+;         4 data inputs ; 402                         ;
 ; cycloneiii_ram_block  ; 40                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 23.00                       ;
-; Average LUT depth     ; 6.48                        ;
+; Max LUT depth         ; 22.00                       ;
+; Average LUT depth     ; 6.22                        ;
 +-----------------------+-----------------------------+
 
 
@@ -912,7 +914,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Full Version
-    Info: Processing started: Sun Oct 14 23:06:55 2018
+    Info: Processing started: Tue Oct 16 12:15:34 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 2073_II -c 2073_II
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
 Info (12021): Found 2 design units, including 1 entities, in source file txd.vhd
@@ -1142,10 +1144,10 @@ Info (12128): Elaborating entity "gr" for hierarchy "gr:U12"
 Info (12128): Elaborating entity "led_encoder" for hierarchy "led_encoder:U13"
 Info (12128): Elaborating entity "statectrl" for hierarchy "statectrl:U14"
 Info (12128): Elaborating entity "uart" for hierarchy "uart:uart_inst"
-Warning (275011): Block or symbol "monostable_trigger" of instance "inst7" overlaps another block or symbol
 Info (12128): Elaborating entity "txd" for hierarchy "uart:uart_inst|txd:inst2"
 Info (12128): Elaborating entity "baud_gen" for hierarchy "uart:uart_inst|baud_gen:inst"
 Info (12128): Elaborating entity "monostable_trigger" for hierarchy "uart:uart_inst|monostable_trigger:inst7"
+Info (12128): Elaborating entity "monostable_trigger" for hierarchy "uart:uart_inst|monostable_trigger:inst8"
 Info (12128): Elaborating entity "rxd" for hierarchy "uart:uart_inst|rxd:inst1"
 Info (12128): Elaborating entity "latch_8bits" for hierarchy "uart:uart_inst|latch_8bits:inst3"
 Warning (19016): Clock multiplexers are found and protected
@@ -1225,15 +1227,15 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1064 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1093 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 15 output pins
-    Info (21061): Implemented 1007 logic cells
+    Info (21061): Implemented 1036 logic cells
     Info (21064): Implemented 40 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 45 warnings
-    Info: Peak virtual memory: 4897 megabytes
-    Info: Processing ended: Sun Oct 14 23:07:20 2018
-    Info: Elapsed time: 00:00:25
-    Info: Total CPU time (on all processors): 00:00:45
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 44 warnings
+    Info: Peak virtual memory: 4900 megabytes
+    Info: Processing ended: Tue Oct 16 12:15:57 2018
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:40
 
 

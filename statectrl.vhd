@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 package statedef is
 	type state is (
 		t_rst_1, t_rst_2, t1, t2, t3, t4, t5, t6, t7, t8,
-		t9,t10, t11, t12, t13, t14, t15, t16, t17, t18
+		t9,t10, t11, t12, t13, t14, t15, t16, t17, t18, t_dly70
 	);
 end statedef;
 library ieee;
@@ -54,6 +54,7 @@ signal txd_cmd_latch: std_logic := '0';
 signal enuart_latch: std_logic := '0';
 signal uart_reset_latch: std_logic := '0';
 signal counter: integer range 0 to 999900 := 0;
+signal counter_dly70: integer range 0 to 699 := 0;
 begin
 	process(clk)
 		begin
@@ -66,7 +67,7 @@ begin
 			dbfbin_latch <= '0'; dbfbout_latch <= '0'; regrd1_latch <= '0';
 			regrd2_latch <= '0'; regwt_latch <= '0'; enrom_latch <= '0';
 			ramin_latch <= '0'; ramrd_latch <= '0'; ramwt_latch <= '0';
-			txd_cmd_latch <= '1'; enuart_latch <= '0'; uart_reset_latch <= '0';
+			txd_cmd_latch <= '1'; enuart_latch <= '0'; uart_reset_latch <= '1';
 			next_state <= t_rst_2;
 		when t_rst_2 =>
 			nextn_latch <= '1';
@@ -216,7 +217,8 @@ begin
 				regwt_latch <= '0';
 				enuart_latch <= '0';
 			elsif opsignals(11) = '1' then
-				uart_reset_latch <= '0';
+				uart_reset_latch <= '1'; -- origin: 0
+				txd_cmd_latch <= '1';
 			else null;
 			end if;
 			if opsignals(5) = '1' or opsignals(7) = '1' or opsignals(10) = '1' or opsignals(11) = '1' then
@@ -271,10 +273,10 @@ begin
 		when t17 => 
 			if opsignals(10) = '1' and r_ready = '1' then
 				enuart_latch <= '1';
-				uart_reset_latch <= '0';
+				uart_reset_latch <= '1'; --origin: 0
 				next_state <= t11;
 			elsif opsignals(11) = '1' and txd_done = '1' then
-				next_state <= t12;
+				next_state <= t_dly70;
 			else
 				if opsignals(11) = '1' then
 					if regf = '1' then
@@ -282,7 +284,6 @@ begin
 					else	
 						dbfaout_latch <= '0';
 					end if;
-					txd_cmd_latch <= '1';
 				end if;
 				next_state <= t17;
 			end if;
@@ -293,6 +294,14 @@ begin
 			else 
 				counter <= counter + 1;
 				next_state <= t18;
+			end if;
+		when t_dly70 => --延时700个周期
+			if counter_dly70 = 999 then
+				counter_dly70 <= 0;
+				next_state <= t12;
+			else 
+				counter_dly70 <= counter_dly70 + 1;
+				next_state <= t_dly70;
 			end if;
 		end case;
 		current_state <= next_state;

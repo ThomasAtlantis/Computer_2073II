@@ -26,7 +26,7 @@ HEADER
 	VERSION = 1;
 	TIME_UNIT = ns;
 	DATA_OFFSET = 0.0;
-	DATA_DURATION = 50000.0;
+	DATA_DURATION = 100000.0;
 	SIMULATION_TIME = 0.0;
 	GRID_PHASE = 0.0;
 	GRID_PERIOD = 100.0;
@@ -593,6 +593,16 @@ SIGNAL("statectrl:U14|enuart_latch")
 	PARENT = "";
 }
 
+SIGNAL("txd_done")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
 TRANSITION_LIST("clk_input")
 {
 	NODE
@@ -600,7 +610,7 @@ TRANSITION_LIST("clk_input")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 5000;
+			REPEAT = 10000;
 			LEVEL 0 FOR 5.0;
 			LEVEL 1 FOR 5.0;
 		}
@@ -612,7 +622,7 @@ TRANSITION_LIST("data[7]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -621,7 +631,7 @@ TRANSITION_LIST("data[6]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -630,7 +640,7 @@ TRANSITION_LIST("data[5]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -639,7 +649,7 @@ TRANSITION_LIST("data[4]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -648,7 +658,7 @@ TRANSITION_LIST("data[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -657,7 +667,7 @@ TRANSITION_LIST("data[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -666,7 +676,7 @@ TRANSITION_LIST("data[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -675,7 +685,7 @@ TRANSITION_LIST("data[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -684,7 +694,7 @@ TRANSITION_LIST("dig[7]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -693,7 +703,7 @@ TRANSITION_LIST("dig[6]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -702,7 +712,7 @@ TRANSITION_LIST("dig[5]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -711,7 +721,7 @@ TRANSITION_LIST("dig[4]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -720,7 +730,7 @@ TRANSITION_LIST("dig[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -729,7 +739,7 @@ TRANSITION_LIST("dig[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -738,7 +748,7 @@ TRANSITION_LIST("dig[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -747,7 +757,7 @@ TRANSITION_LIST("dig[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -756,7 +766,7 @@ TRANSITION_LIST("sel[5]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -765,7 +775,7 @@ TRANSITION_LIST("sel[4]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -774,7 +784,7 @@ TRANSITION_LIST("sel[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -783,7 +793,7 @@ TRANSITION_LIST("sel[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -792,7 +802,7 @@ TRANSITION_LIST("sel[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -801,7 +811,7 @@ TRANSITION_LIST("sel[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -810,7 +820,7 @@ TRANSITION_LIST("statectrl:U14|dbfaout_latch")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -819,7 +829,7 @@ TRANSITION_LIST("statectrl:U14|dbfbin_latch")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -828,7 +838,7 @@ TRANSITION_LIST("statectrl:U14|dbfbout_latch")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -837,7 +847,7 @@ TRANSITION_LIST("statectrl:U14|enalu_latch")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -846,7 +856,7 @@ TRANSITION_LIST("statectrl:U14|enirin_latch")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -855,7 +865,7 @@ TRANSITION_LIST("statectrl:U14|enled_latch")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -864,7 +874,7 @@ TRANSITION_LIST("statectrl:U14|enpcout_latch")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -873,7 +883,7 @@ TRANSITION_LIST("statectrl:U14|enrom_latch")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -882,7 +892,7 @@ TRANSITION_LIST("statectrl:U14|ldpc_latch")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -891,7 +901,7 @@ TRANSITION_LIST("statectrl:U14|nextn_latch")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -900,7 +910,7 @@ TRANSITION_LIST("statectrl:U14|regrd1_latch")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -909,7 +919,7 @@ TRANSITION_LIST("statectrl:U14|regrd2_latch")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -918,7 +928,7 @@ TRANSITION_LIST("statectrl:U14|regwt_latch")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -927,7 +937,7 @@ TRANSITION_LIST("statectrl:U14|romin_latch")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -936,7 +946,7 @@ TRANSITION_LIST("statectrl:U14|rstpc_latch")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -945,7 +955,7 @@ TRANSITION_LIST("grctrl:U11|grc_grrd[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -954,7 +964,7 @@ TRANSITION_LIST("grctrl:U11|grc_grrd[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -963,7 +973,7 @@ TRANSITION_LIST("grctrl:U11|grc_grrd[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -972,7 +982,7 @@ TRANSITION_LIST("grctrl:U11|grc_grrd[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -981,7 +991,7 @@ TRANSITION_LIST("grctrl:U11|grc_grwt[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -990,7 +1000,7 @@ TRANSITION_LIST("grctrl:U11|grc_grwt[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -999,7 +1009,7 @@ TRANSITION_LIST("grctrl:U11|grc_grwt[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -1008,7 +1018,7 @@ TRANSITION_LIST("grctrl:U11|grc_grwt[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -1017,7 +1027,7 @@ TRANSITION_LIST("rxd")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 50000.0;
+		LEVEL 0 FOR 100000.0;
 	}
 }
 
@@ -1026,7 +1036,7 @@ TRANSITION_LIST("txd")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -1035,7 +1045,7 @@ TRANSITION_LIST("statectrl:U14|uart_reset_latch")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -1044,7 +1054,7 @@ TRANSITION_LIST("statectrl:U14|txd_cmd_latch")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -1053,7 +1063,16 @@ TRANSITION_LIST("statectrl:U14|enuart_latch")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 50000.0;
+		LEVEL X FOR 100000.0;
+	}
+}
+
+TRANSITION_LIST("txd_done")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -1593,6 +1612,15 @@ DISPLAY_LINE
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 55;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "txd_done";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 56;
 	TREE_LEVEL = 0;
 }
 

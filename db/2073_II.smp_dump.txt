@@ -15,47 +15,49 @@ state.x_shift 0 1 0 0 1
 state.x_stop 1 0 0 0 1 
 
 State Machine - |computer_8bits|statectrl:U14|current_state
-Name current_state.t18 current_state.t17 current_state.t16 current_state.t15 current_state.t14 current_state.t13 current_state.t12 current_state.t11 current_state.t10 current_state.t9 current_state.t8 current_state.t7 current_state.t6 current_state.t5 current_state.t4 current_state.t3 current_state.t2 current_state.t1 current_state.t_rst_2 current_state.t_rst_1 
-current_state.t_rst_1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-current_state.t_rst_2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
-current_state.t1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
-current_state.t2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
-current_state.t3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
-current_state.t4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
-current_state.t5 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
-current_state.t6 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
-current_state.t7 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
-current_state.t8 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
-current_state.t9 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
-current_state.t10 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
-current_state.t11 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
-current_state.t12 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
-current_state.t13 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-current_state.t14 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-current_state.t15 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-current_state.t16 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-current_state.t17 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-current_state.t18 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+Name current_state.t_dly70 current_state.t18 current_state.t17 current_state.t16 current_state.t15 current_state.t14 current_state.t13 current_state.t12 current_state.t11 current_state.t10 current_state.t9 current_state.t8 current_state.t7 current_state.t6 current_state.t5 current_state.t4 current_state.t3 current_state.t2 current_state.t1 current_state.t_rst_2 current_state.t_rst_1 
+current_state.t_rst_1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.t_rst_2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.t1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.t2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.t3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.t4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.t5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.t6 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.t7 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.t8 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.t9 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.t10 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+current_state.t11 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.t12 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.t13 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.t14 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.t15 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.t16 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.t17 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.t18 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.t_dly70 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
 
 State Machine - |computer_8bits|statectrl:U14|next_state
-Name next_state.t18 next_state.t17 next_state.t16 next_state.t15 next_state.t14 next_state.t13 next_state.t12 next_state.t11 next_state.t10 next_state.t9 next_state.t8 next_state.t7 next_state.t6 next_state.t5 next_state.t4 next_state.t3 next_state.t2 next_state.t1 next_state.t_rst_2 next_state.t_rst_1 
-next_state.t_rst_1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-next_state.t_rst_2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
-next_state.t1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
-next_state.t2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
-next_state.t3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
-next_state.t4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
-next_state.t5 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
-next_state.t6 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
-next_state.t7 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
-next_state.t8 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
-next_state.t9 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
-next_state.t10 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
-next_state.t11 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
-next_state.t12 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
-next_state.t13 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-next_state.t14 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-next_state.t15 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-next_state.t16 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-next_state.t17 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-next_state.t18 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+Name next_state.t_dly70 next_state.t18 next_state.t17 next_state.t16 next_state.t15 next_state.t14 next_state.t13 next_state.t12 next_state.t11 next_state.t10 next_state.t9 next_state.t8 next_state.t7 next_state.t6 next_state.t5 next_state.t4 next_state.t3 next_state.t2 next_state.t1 next_state.t_rst_2 next_state.t_rst_1 
+next_state.t_rst_1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+next_state.t_rst_2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+next_state.t1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+next_state.t2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+next_state.t3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+next_state.t4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+next_state.t5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+next_state.t6 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+next_state.t7 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+next_state.t8 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+next_state.t9 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+next_state.t10 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+next_state.t11 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+next_state.t12 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+next_state.t13 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+next_state.t14 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+next_state.t15 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+next_state.t16 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+next_state.t17 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+next_state.t18 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+next_state.t_dly70 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 

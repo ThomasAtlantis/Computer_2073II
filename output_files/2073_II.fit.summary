@@ -1,14 +1,14 @@
-Fitter Status : Successful - Sun Oct 14 23:07:46 2018
+Fitter Status : Successful - Tue Oct 16 12:16:23 2018
 Quartus II 64-Bit Version : 15.0.0 Build 145 04/22/2015 SJ Full Version
 Revision Name : 2073_II
 Top-level Entity Name : computer_8bits
 Family : Cyclone IV E
 Device : EP4CE6F17C8
 Timing Models : Final
-Total logic elements : 983 / 6,272 ( 16 % )
-    Total combinational functions : 890 / 6,272 ( 14 % )
-    Dedicated logic registers : 439 / 6,272 ( 7 % )
-Total registers : 439
+Total logic elements : 1,006 / 6,272 ( 16 % )
+    Total combinational functions : 918 / 6,272 ( 15 % )
+    Dedicated logic registers : 451 / 6,272 ( 7 % )
+Total registers : 451
 Total pins : 17 / 180 ( 9 % )
 Total virtual pins : 0
 Total memory bits : 10,240 / 276,480 ( 4 % )
